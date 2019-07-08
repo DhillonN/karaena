@@ -1,21 +1,106 @@
-import React from "react"
-import { Link } from "gatsby"
+import React from 'react'
+import {graphql} from 'gatsby'
+import Layout from '../components/layout'
+import Projects from '../components/Projects/projects'
+import Testimonials from '../components/Testimonials/Testimonials'
+const index=({data})=>(
+<Layout>
+<Projects projectsData={data.allNodeProjects}></Projects>
+<Testimonials testimonialsData={data.allNodeTestimonials}/>
+</Layout>
 
-import Layout from "../components/layout"
-import Image from "../components/image"
-import SEO from "../components/seo"
-
-const IndexPage = () => (
-  <Layout>
-    <SEO title="Home" keywords={[`gatsby`, `application`, `react`]} />
-    <h1>Hi people</h1>
-    <p>Welcome to your new Gatsby site.</p>
-    <p>Now go build something great.</p>
-    <div style={{ maxWidth: `300px`, marginBottom: `1.45rem` }}>
-      <Image />
-    </div>
-    <Link to="/page-2/">Go to page 2</Link>
-  </Layout>
 )
+export default index
 
-export default IndexPage
+export const query = graphql`
+  query {
+    nodeFrontPage {
+      id
+      title
+      body {
+        processed
+      }
+      relationships {
+        field_photo {
+          localFile {
+            url
+            childImageSharp{
+              fluid{
+                ...GatsbyImageSharpFluid_withWebp_tracedSVG
+            }
+          }
+          }
+        }
+      }
+    }
+    allNodeProjects {
+      edges {
+        node {
+          id
+          title
+          field_subtext
+          relationships {
+            field_photo {
+              id
+              localFile {
+                childImageSharp {
+                  fluid(maxWidth: 500) {
+                    ...GatsbyImageSharpFluid_tracedSVG
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+    allNodeTestimonials {
+      edges {
+        node {
+          title
+          field_webpage {
+            uri
+          }
+          field_position
+          field_organisation
+          field_show_on_frontpage
+          body {
+            processed
+          }
+          relationships {
+            field_photo {
+              localFile {
+                url
+                childImageSharp{
+                  fluid(maxWidth:250){
+                    ...GatsbyImageSharpFluid_withWebp_tracedSVG
+                }
+              }
+              }
+            }
+          }
+        }
+      }
+    }
+    nodeAboutPage {
+      id
+      title
+      body {
+        processed
+        summary
+      }
+      relationships {
+        field_photo {
+          localFile {
+            url
+            childImageSharp{
+              fluid(maxWidth:500){
+                ...GatsbyImageSharpFluid_withWebp_tracedSVG
+            }
+          }
+          }
+        }
+      }
+    }
+  }
+`

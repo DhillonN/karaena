@@ -1,53 +1,32 @@
-/**
- * Layout component that queries for data
- * with Gatsby's StaticQuery component
- *
- * See: https://www.gatsbyjs.org/docs/static-query/
- */
-
 import React from "react"
-import PropTypes from "prop-types"
-import { StaticQuery, graphql } from "gatsby"
-
-import Header from "./header"
-import "./layout.css"
-
-const Layout = ({ children }) => (
-  <StaticQuery
-    query={graphql`
-      query SiteTitleQuery {
-        site {
-          siteMetadata {
-            title
-          }
-        }
-      }
-    `}
-    render={data => (
-      <>
-        <Header siteTitle={data.site.siteMetadata.title} />
-        <div
-          style={{
-            margin: `0 auto`,
-            maxWidth: 960,
-            padding: `0px 1.0875rem 1.45rem`,
-            paddingTop: 0,
-          }}
-        >
-          <main>{children}</main>
-          <footer>
-            © {new Date().getFullYear()}, Built with
-            {` `}
-            <a href="https://www.gatsbyjs.org">Gatsby</a>
-          </footer>
-        </div>
-      </>
-    )}
-  />
+import './bootstrap'
+import CssBaseLine from '@material-ui/core/CssBaseline'
+import PropTypes from 'prop-types'
+import Header from "../components/Header/Header"
+import HeaderLinks from "../components/Header/HeaderLinks"
+import { createMuiTheme, MuiThemeProvider } from "@material-ui/core/styles"
+import { karaenaGold } from "../assets/global"
+import '../assets/global.css'
+const theme = createMuiTheme({
+  palette: {
+    primary: {
+      main: karaenaGold,
+    },
+  },
+  typography: {
+    useNextVariants: true,
+  },
+})
+const layout = ({ children }) => (
+  <>
+  <MuiThemeProvider theme={theme}>
+  <CssBaseLine/>
+    <Header fixed={true} brand="KARAENA VINCENT" rightLinks={<HeaderLinks />} />
+    <main>{children}</main>
+    </MuiThemeProvider>
+  </>
 )
-
-Layout.propTypes = {
-  children: PropTypes.node.isRequired,
+layout.propTypes={
+    children: PropTypes.node.isRequired,
 }
-
-export default Layout
+export default layout
