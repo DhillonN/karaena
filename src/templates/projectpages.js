@@ -14,9 +14,10 @@ const projectpages= ({data, classes})=>{
       <h1 className={classes.title}>
         {project.title}
       </h1>
-     <Gallery images={project.relationships.field_gallery.map(({ localFile }) => (
+     <Gallery images={project.relationships.field_gallery.map(({ localFile },i) => (
       {
         id:localFile.id,
+        alt:project.field_gallery[i].alt,
         ...localFile.childImageSharp.fluid,
       }
     ))}></Gallery></div></Layout>
@@ -28,6 +29,9 @@ query($id: String!){
 nodeProjects (id: {eq: $id}) {
     id
     title
+    field_gallery{
+      alt
+    }
     relationships{
       field_gallery{
         localFile{

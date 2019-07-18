@@ -2,6 +2,7 @@ import {
   container,
   title,
   cardTitle,
+  karaenaGold,
 } from "../../assets/global"
 import imageStyle from "../../assets/imagesStyles"
 const landingPageStyle = {
@@ -61,8 +62,22 @@ const landingPageStyle = {
     color: "black",
   },
   frontImage:{
+    width:"30%",
+    height:"100vh",
+    objectFit:"scale-down",
+  },
+  frontMatter:{
     width:"50%",
   },
+  wrapper:{
+    display: "flex",
+    flexFlow:"row",
+    alignItems:"center",
+    justifyContent:"space-between"
+  },
+  mainLinks:{
+    color:karaenaGold,
+  }
 }
 
 export default landingPageStyle

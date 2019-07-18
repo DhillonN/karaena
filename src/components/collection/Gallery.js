@@ -29,7 +29,7 @@ const Gallery = ({ images, classes }) => {
 
       >
         {images.map((image, i) => (
-          <div className={classes.columns}>
+          <div className={classes.columns} key={i}>
             <Link
               key={image.id}
               href={image.originalImg}
@@ -38,7 +38,7 @@ const Gallery = ({ images, classes }) => {
                 openModal(i)
               }}
             >
-              <Img fluid={image} className={classes.imgRounded} />
+              <Img fluid={image} alt={image.alt} className={classes.imgRounded} />
             </Link>
           </div>
         ))}
