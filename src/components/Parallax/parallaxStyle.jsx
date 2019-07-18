@@ -10,9 +10,8 @@ const parallaxStyle = {
     padding: "10px",
     border: "0",
     display: "flex",
-    alignItems: "flex-end",
-    flexFlow:"column",
-    justifyContent:"center"
+    flexFlow:"row",
+    justifyContent:"space-between"
   },
   filter: {
     "&:before": {

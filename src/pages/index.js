@@ -3,8 +3,10 @@ import {graphql} from 'gatsby'
 import Layout from '../components/layout'
 import Projects from '../components/Projects/projects'
 import Testimonials from '../components/Testimonials/Testimonials'
+import Landingpage from '../components/LandingPage/LandingPage'
 const index=({data})=>(
 <Layout>
+  <Landingpage pagedata={data.nodeFrontPage}/>
 <Projects projectsData={data.allNodeProjects}></Projects>
 <Testimonials testimonialsData={data.allNodeTestimonials}/>
 </Layout>

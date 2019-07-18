@@ -7,6 +7,7 @@ import HeaderLinks from "../components/Header/HeaderLinks"
 import { createMuiTheme, MuiThemeProvider } from "@material-ui/core/styles"
 import { karaenaGold } from "../assets/global"
 import '../assets/global.css'
+import Seo from '../components/seo'
 const theme = createMuiTheme({
   palette: {
     primary: {
@@ -19,6 +20,7 @@ const theme = createMuiTheme({
 })
 const layout = ({ children }) => (
   <>
+  <Seo></Seo>
   <MuiThemeProvider theme={theme}>
   <CssBaseLine/>
     <Header fixed={true} brand="KARAENA VINCENT" rightLinks={<HeaderLinks />} />

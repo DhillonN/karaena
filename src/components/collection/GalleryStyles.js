@@ -3,6 +3,7 @@ const GalleryStyles={
 height:'100%',
     },
     columns:{
+        padding: "5px",
         width:"100%",
         "@media (min-width: 576px)": {
           width: "100%"

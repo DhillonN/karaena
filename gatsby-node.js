@@ -28,8 +28,10 @@ exports.createPages = ({ graphql, actions }) => {
     }
   `).then(projects => {
     projects.data.allNodeProjects.edges.forEach(({ node }) => {
+      var pathString=(node.title).replace(/\s/g,'');
+      console.warn(pathString);
       createPage({
-        path: node.title,
+        path: pathString,
         component: path.resolve("./src/templates/projectpages.js"),
         context: {
           id: node.id,

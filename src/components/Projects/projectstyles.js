@@ -19,6 +19,7 @@ import {
       textAlign:"center",
       color:karaenaGold,
       padding:"3rem",
+      fontSize:"2.5rem",
     },
     title: {
       ...title,
@@ -28,6 +29,8 @@ import {
       minHeight: "32px",
       color: karaenaGold,
       textDecoration: "none",
+      fontSize:"1.9rem"
+
     },
     ...imageStyle,
     imgRaised:{

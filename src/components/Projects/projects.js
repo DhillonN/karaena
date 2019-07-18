@@ -27,12 +27,12 @@ class projectsSection extends React.Component {
     const animations=['zoom-in-right','zoom-in-up','zoom-in-left','flip-right','flip-up','flip-left']
     var counter=0;
     return (
-      <>
+      <section id="works">
         <h2 className={classNames(classes.projectTitle)}>Recent Projects</h2>
         <Grid className={classes.container}>
           {projectsData.edges.map(({ node }, i) => (
             <div data-aos={animations[counter++]} key={i}>
-            <Link to={`/${node.title}`}>
+            <Link to={`/${node.title.replace(/\s/g,'')}`}>
               <GridItems
                 xs={12}
                 sm={12}
@@ -62,7 +62,7 @@ class projectsSection extends React.Component {
             </div>
           ))}
         </Grid>
-      </>
+      </section>
     )
   }
 }
