@@ -3,6 +3,7 @@ import {
     title,
     karaenaGold,
     lightKaraenaGold,
+
   } from "../../assets/global"
   import imageStyle from "../../assets/imagesStyles"
   const projectStyle = {

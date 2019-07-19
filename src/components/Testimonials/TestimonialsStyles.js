@@ -25,7 +25,7 @@ import {
     ...imageStyle,
     imgFit:{
 objectFit:"contain !important",
-maxWidth:"100px",
+maxWidth:"100px !important",
 width:"100%",
     },
     subtitle: {
