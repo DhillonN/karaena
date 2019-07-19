@@ -24,7 +24,9 @@ import {
     },
     ...imageStyle,
     imgFit:{
-objectFit:"contain !important"
+objectFit:"contain !important",
+maxWidth:"100px",
+width:"100%",
     },
     subtitle: {
       fontSize: "1.313rem",
@@ -54,6 +56,14 @@ objectFit:"contain !important"
       color: "#6c757d",
 
     },
+    card:{
+      width:"50%",
+      margin:"0 auto",
+      display:"flex",
+      flexFlow:"column",
+      alignItems:"center",
+
+    },
     description: {
       color: "#999"
     },
@@ -65,6 +75,9 @@ objectFit:"contain !important"
       textDecoration: "none",
       color: "black",
     },
+    container:{
+      width:"100%",
+    }
   }
 
   export default TestimonialsStyle

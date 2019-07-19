@@ -4,6 +4,7 @@ import Layout from '../components/layout'
 import Projects from '../components/Projects/projects'
 import Testimonials from '../components/Testimonials/Testimonials'
 import Landingpage from '../components/LandingPage/LandingPage'
+import "typeface-montserrat"
 const index=({data})=>(
 <Layout>
   <Landingpage pagedata={data.nodeFrontPage}/>

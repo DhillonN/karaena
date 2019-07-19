@@ -4,8 +4,6 @@ import Button from "../CustomButtons/Button"
 import classNames from "classnames"
 import withStyles from "@material-ui/core/styles/withStyles"
 import PageStyles from "./landingPageStyles"
-import Img from "gatsby-image/withIEPolyfill"
-import { Link } from "gatsby"
 class LandingPage extends React.Component {
   render() {
     const fields = this.props.pagedata
@@ -16,7 +14,7 @@ class LandingPage extends React.Component {
 
             <h1>{fields.title}</h1>
             <span dangerouslySetInnerHTML={{ __html: fields.body.processed }} />
-            <Button color="primary">Book your free consultation</Button>
+            <Button color="primary" href="https://app.acuityscheduling.com/schedule.php?owner=17979620" target="_blank">Book your free consultation</Button>
 
         </Parallax>
       </>

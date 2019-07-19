@@ -26,18 +26,19 @@ const Testimonials = ({ classes, testimonialsData }) => {
   return (
     <>
       <h2 className={classes.title}>What Our Clients Say</h2>
-<Grid>
+        <div className={classes.container}>
         <Slider {...settings}>
           {testimonialsData.edges.map(({ node }, i) => (
-            <GridItems key={i} xs={12} sm={12} md={4}>
-              <div className={classNames(classes.main, classes.mainRaised)}>
-                <Card plain key={i}>
-                  <GridItems
-                    xs={12}
-                    sm={12}
-                    md={6}
-                    className={classes.itemGrid}
-                  >
+            <div key={i}>
+                <Card plain key={i} className={classes.card}>
+                <CardBody testimonials>
+                    <span
+                      className={classes.description}
+                      dangerouslySetInnerHTML={{
+                        __html: node.body.processed,
+                      }}
+                    />
+                  </CardBody>
                     <Image
                       fluid={
                         node.relationships.field_photo.localFile.childImageSharp
@@ -46,7 +47,6 @@ const Testimonials = ({ classes, testimonialsData }) => {
                       alt={node.title}
                       className={imageClasses}
                     />
-                  </GridItems>
                   <h4 className={classes.cardTitle}>{node.title}</h4>
                   <small className={classes.smallTitle}>
                     {node.field_position}
@@ -54,20 +54,11 @@ const Testimonials = ({ classes, testimonialsData }) => {
                   <a className={classes.Link} href={node.field_webpage}>
                     {node.field_organisation}
                   </a>
-                  <CardBody testimonials>
-                    <span
-                      className={classes.description}
-                      dangerouslySetInnerHTML={{
-                        __html: node.body.processed,
-                      }}
-                    />
-                  </CardBody>
+
                 </Card>
-              </div>
-            </GridItems>
+</div>
           ))}
-        </Slider>
-      </Grid>
+        </Slider></div>
     </>
   )
 }
