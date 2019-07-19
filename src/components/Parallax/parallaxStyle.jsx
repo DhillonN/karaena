@@ -6,12 +6,14 @@ const parallaxStyle = {
     position: "relative",
     backgroundPosition: "center center",
     backgroundSize: "cover",
+    backgroundRepeat:"no-repeat",
     margin: "0",
-    padding: "10px",
+    padding: "20%",
     border: "0",
     display: "flex",
-    flexFlow:"row",
-    justifyContent:"space-between"
+    flexFlow:"column",
+    justifyContent:"space-between",
+    alignItems:"center",
   },
   filter: {
     "&:before": {
