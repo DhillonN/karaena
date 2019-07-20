@@ -2,7 +2,8 @@ import {
   title,
   cardTitle,
   main,
-  mainRaised
+  mainRaised,
+  karaenaGold
 } from "../../assets/global"
 import imageStyle from "../../assets/imagesStyles"
 const GalleryStyle = {
@@ -24,7 +25,7 @@ const GalleryStyle = {
     marginTop: "1rem",
     minHeight: "32px",
     height:"fit-content",
-    color: "#00000",
+    color: karaenaGold,
     textDecoration: "none",
     maxWidth:"100%",
     overflow:"hidden",

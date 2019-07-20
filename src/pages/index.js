@@ -7,7 +7,7 @@ import Landingpage from '../components/LandingPage/LandingPage'
 import "typeface-montserrat"
 import classNames from 'classnames'
 import withStyles from '@material-ui/styles/withStyles'
-import mainStyles from './mainStyles'
+import mainStyles from '../components/mainStyles'
 import About from "../components/About/About"
 const index=({data,classes})=>(
 <Layout>
