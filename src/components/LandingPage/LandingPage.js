@@ -10,7 +10,7 @@ class LandingPage extends React.Component {
     const classes = this.props.classes
     return (
       <>
-        <Parallax image={fields.relationships.field_photo.localFile.childImageSharp.fluid.src}>
+        <Parallax image={fields.relationships.field_photo.localFile.publicURL}>
 
             <h1>{fields.title}</h1>
             <span dangerouslySetInnerHTML={{ __html: fields.body.processed }} />

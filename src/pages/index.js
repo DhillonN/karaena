@@ -27,9 +27,13 @@ export const query = graphql`
         field_photo {
           localFile {
             url
+            publicURL
             childImageSharp{
               fluid{
-                ...GatsbyImageSharpFluid_withWebp_tracedSVG
+                srcWebp
+            }
+            fixed{
+              src
             }
           }
           }
