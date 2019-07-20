@@ -5,5 +5,10 @@ body{
     font-family:  'Montserrat', sans-serif;
 }
 .react-Images__positioner{
-    z-Index: '1200'
+    z-Index: '1200';
 }
+section{
+    margin-top: 10vh;
+
+
+  }

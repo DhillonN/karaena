@@ -24,7 +24,7 @@ const Testimonials = ({ classes, testimonialsData }) => {
     autoplay:true,
   }
   return (
-    <>
+    <section id="testimonials">
       <h2 className={classes.title}>What Our Clients Say</h2>
         <div className={classes.container}>
         <Slider {...settings}>
@@ -59,7 +59,7 @@ const Testimonials = ({ classes, testimonialsData }) => {
 </div>
           ))}
         </Slider></div>
-    </>
+    </section>
   )
 }
 export default withStyles(PageStyles)(Testimonials)

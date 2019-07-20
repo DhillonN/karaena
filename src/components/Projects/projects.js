@@ -27,7 +27,7 @@ class projectsSection extends React.Component {
     const animations=['zoom-in-right','zoom-in-up','zoom-in-left','flip-right','flip-up','flip-left']
     var counter=0;
     return (
-      <section id="works" className={classNames(classes.main,classes.mainRaised)}>
+      <section id="works" >
         <h2 className={classNames(classes.projectTitle)}>Recent Projects</h2>
         <Grid className={classes.container}>
           {projectsData.edges.map(({ node }, i) => (

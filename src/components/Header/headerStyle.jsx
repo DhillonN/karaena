@@ -58,6 +58,7 @@ const headerStyle = {
   flex: {
     flex: 0.8,
     textAlign: "center",
+    paddingRight:"5%",
   },
   title: {
     ...defaultFont,

@@ -57,7 +57,7 @@ width:"100%",
 
     },
     card:{
-      width:"50%",
+      width:"100%",
       margin:"0 auto",
       display:"flex",
       flexFlow:"column",
@@ -75,9 +75,7 @@ width:"100%",
       textDecoration: "none",
       color: "black",
     },
-    container:{
-      width:"100%",
-    }
+
   }
 
   export default TestimonialsStyle
