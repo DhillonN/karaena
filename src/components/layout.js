@@ -23,7 +23,7 @@ const layout = ({ children }) => (
   <Seo></Seo>
   <MuiThemeProvider theme={theme}>
   <CssBaseLine/>
-    <Header fixed={true} brand="KARAENA VINCENT" rightLinks={<HeaderLinks />} />
+    <Header fixed={true} brand="KARAENA VINCENT PHOTOGRAPHER" rightLinks={<HeaderLinks />} />
     <main>{children}</main>
     </MuiThemeProvider>
   </>
