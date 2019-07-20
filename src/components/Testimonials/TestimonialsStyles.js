@@ -65,7 +65,10 @@ width:"100%",
 
     },
     description: {
-      color: "#999"
+      color: "#999",
+      fontSize:"1.5rem",
+      fontWeight:"300",
+      textAlign:"justified"
     },
     section: {
       padding: "70px 0",

@@ -17,14 +17,21 @@ const landingPageStyle = {
     position: "relative",
     marginTop: "30px",
     minHeight: "32px",
-    color: "#00000",
+    color: "#ffff",
+    fontWeight:"300",
     textDecoration: "none",
+    fontFamily: "'Montserrat', sans-serif",
+    width:"100%",
+    textAlign:"center"
   },
   ...imageStyle,
   subtitle: {
     fontSize: "1.313rem",
-    maxWidth: "500px",
+    maxWidth: "100%",
     margin: "10px auto 0",
+    color:"#ffff",
+    textAlign:"center",
+    fontFamily: "'Montserrat', sans-serif",
   },
   main: {
     background: "#FFFFFF",

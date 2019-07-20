@@ -42,7 +42,7 @@ nodeSocialPost (id: {eq: $id}) {
         localFile{
           id
           childImageSharp{
-            fluid{
+            fluid(maxWidth:1920){
               ...GatsbyImageSharpFluid_withWebp_tracedSVG
               presentationWidth
               originalImg

@@ -10,10 +10,10 @@ class LandingPage extends React.Component {
     const classes = this.props.classes
     return (
       <>
-        <Parallax image={fields.relationships.field_photo.localFile.publicURL}>
+        <Parallax image={fields.relationships.field_photo.localFile.childImageSharp.fixed.srcWebp}>
 
-            <h1>{fields.title}</h1>
-            <span dangerouslySetInnerHTML={{ __html: fields.body.processed }} />
+            <h1 className={classes.title}>{fields.title}</h1>
+            <span className={classes.subtitle} dangerouslySetInnerHTML={{ __html: fields.body.processed }} />
             <Button color="primary" href="https://app.acuityscheduling.com/schedule.php?owner=17979620" target="_blank">Book your free consultation</Button>
 
         </Parallax>

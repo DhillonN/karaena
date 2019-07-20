@@ -8,11 +8,13 @@ import "typeface-montserrat"
 import classNames from 'classnames'
 import withStyles from '@material-ui/styles/withStyles'
 import mainStyles from './mainStyles'
+import About from "../components/About/About"
 const index=({data,classes})=>(
 <Layout>
   <Landingpage pagedata={data.nodeFrontPage}/>
   <div className={classNames(classes.main, classes.mainRaised)}>
 <Projects projectsData={data.allNodeProjects}></Projects>
+<About aboutData={data.nodeAboutPage}/>
 <Testimonials testimonialsData={data.allNodeTestimonials}/>
 </div>
 </Layout>
@@ -34,23 +36,19 @@ export const query = graphql`
             url
             publicURL
             childImageSharp{
-              fluid{
+              fixed(width:1920,quality:100){
                 srcWebp
-            }
-            fixed{
-              src
-            }
+              }
           }
           }
         }
       }
     }
-    allNodeProjects {
+    allNodeProjects(sort: {fields: changed, order: ASC}) {
       edges {
         node {
           id
           title
-          field_subtext
           relationships {
             field_photo {
               id

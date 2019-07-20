@@ -12,7 +12,7 @@ import Tooltip from "@material-ui/core/Tooltip";
 // @material-ui/icons
 
 // React icons
-import { FaTwitter, FaFacebook, FaInstagram } from 'react-icons/fa';
+import { FaGoogle, FaFacebook, FaInstagram,FaLinkedin } from 'react-icons/fa';
 
 // core components
 import Button from "../CustomButtons/Button";
@@ -28,7 +28,7 @@ function HeaderLinks({ ...props }) {
        <span className={classes.underline}></span>
       </ListItem>
       <ListItem className={classes.listItem}>
-       <Link to="/about" className={classes.navLink}> About</Link>
+       <Link to="/#about" className={classes.navLink}> About</Link>
        <span className={classes.underline}></span>
       </ListItem>
       <ListItem className={classes.listItem}>
@@ -38,30 +38,30 @@ function HeaderLinks({ ...props }) {
       <ListItem className={classes.listItem}>
         <Tooltip
           id="instagram-twitter"
-          title="Follow us on twitter"
+          title="Follow me on linked in"
           placement={typeof window !== 'undefined' && window.innerWidth > 959 ? "top" : "left"}
           classes={{ tooltip: classes.tooltip }}
         >
           <Button
-            href="https://twitter.com/CreativeTim"
+            href="https://www.linkedin.com/in/karaena-vincent-456b44123/"
             target="_blank"
             color="transparent"
             className={classes.navLink}
           >
-            <FaTwitter/>
+            <FaLinkedin/>
           </Button>
         </Tooltip>
       </ListItem>
       <ListItem className={classes.listItem}>
         <Tooltip
           id="instagram-facebook"
-          title="Follow us on facebook"
+          title="Follow me on facebook"
           placement={typeof window !== 'undefined' && window.innerWidth > 959 ? "top" : "left"}
           classes={{ tooltip: classes.tooltip }}
         >
           <Button
             color="transparent"
-            href="https://www.facebook.com/CreativeTim"
+            href="https://www.facebook.com/karaenavincentphotography"
             target="_blank"
             className={classes.navLink}
           >
@@ -72,13 +72,13 @@ function HeaderLinks({ ...props }) {
       <ListItem className={classes.listItem}>
         <Tooltip
           id="instagram-tooltip"
-          title="Follow us on instagram"
+          title="Follow me on instagram"
           placement={typeof window !== 'undefined' && window.innerWidth > 959 ? "top" : "left"}
           classes={{ tooltip: classes.tooltip }}
         >
           <Button
             color="transparent"
-            href="https://www.instagram.com/CreativeTimOfficial"
+            href="https://www.instagram.com/karaenavincent_photography"
             target="_blank"
             className={classes.navLink}
           >

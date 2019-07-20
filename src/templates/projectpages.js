@@ -38,7 +38,7 @@ nodeProjects (id: {eq: $id}) {
           id
           url
           childImageSharp{
-            fluid{
+            fluid(maxWidth:1920){
               ...GatsbyImageSharpFluid_withWebp_tracedSVG
               presentationWidth
               originalImg
