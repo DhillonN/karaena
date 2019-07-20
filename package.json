@@ -1,9 +1,9 @@
 {
-  "name": "gatsby-starter-default",
+  "name": "karaena_vincent_photography",
   "private": true,
-  "description": "A simple starter to get up and developing quickly with Gatsby",
+  "description": "Karaena Vincent's official site",
   "version": "0.1.0",
-  "author": "Kyle Mathews <mathews.kyle@gmail.com>",
+  "author": "Navtej Dhillon <navtejxs@gmail.com>",
   "dependencies": {
     "@material-ui/core": "^3.9.3",
     "@material-ui/icons": "^3.0.2",
@@ -61,9 +61,9 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/gatsbyjs/gatsby-starter-default"
+    "url": "https://github.com/DhillonN/karaena"
   },
   "bugs": {
-    "url": "https://github.com/gatsbyjs/gatsby/issues"
+    "url": "https://github.com/DhillonN/karaena/issues"
   }
 }

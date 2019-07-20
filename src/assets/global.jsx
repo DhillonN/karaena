@@ -164,11 +164,15 @@ const underline= {
   border: '2px solid',
   borderColor:karaenaGold,
   width: '95%',
-  display: 'block',
+  display: 'none',
   transform:"translate(-100%,0)",
   position: 'absolute',
   top: 35,
-  transition: 'transform .15s linear',
+
+  "@media (min-width: 992px)": {
+    display:"block"
+  },
+
 };
 const  mainRaised= {
   marginTop: "100px",

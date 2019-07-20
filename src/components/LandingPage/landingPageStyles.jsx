@@ -22,16 +22,36 @@ const landingPageStyle = {
     textDecoration: "none",
     fontFamily: "'Montserrat', sans-serif",
     width:"100%",
-    textAlign:"center"
+    fontSize:"1.2rem",
+    textAlign:"center",
+    "@media (min-width: 576px)": {
+     fontSize:"1.2rem"
+    },
+    "@media (min-width: 768px)": {
+      fontSize:"1.5rem"
+    },
+    "@media (min-width: 992px)": {
+      fontSize:"2.5rem"
+    },
+
   },
   ...imageStyle,
   subtitle: {
-    fontSize: "1.313rem",
+    fontSize: "1rem",
     maxWidth: "100%",
     margin: "10px auto 0",
     color:"#ffff",
     textAlign:"center",
     fontFamily: "'Montserrat', sans-serif",
+    "@media (min-width: 576px)": {
+      fontSize:"1rem"
+     },
+     "@media (min-width: 768px)": {
+       fontSize:"1.2rem"
+     },
+     "@media (min-width: 992px)": {
+       fontSize:"1.5rem"
+     },
   },
   main: {
     background: "#FFFFFF",

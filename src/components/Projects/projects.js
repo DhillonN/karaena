@@ -28,7 +28,7 @@ class projectsSection extends React.Component {
     var counter=0;
     return (
       <section id="works" >
-        <h2 className={classNames(classes.projectTitle)}>Recent Projects</h2>
+        <h2 className={classNames(classes.projectTitle)}>My Work</h2>
         <Grid className={classes.container}>
           {projectsData.edges.map(({ node }, i) => (
             <div data-aos={animations[counter++]} key={i}>

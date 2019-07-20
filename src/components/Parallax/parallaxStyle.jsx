@@ -8,13 +8,14 @@ const parallaxStyle = {
     backgroundSize: "cover",
     backgroundRepeat:"no-repeat",
     margin: "0",
-    paddingTop: "25%",
-    paddingBottom:"25%",
+    paddingTop: "45vh",
+    paddingBottom:"20vh",
     border: "0",
     display: "flex",
     flexFlow:"column",
     justifyContent:"space-between",
     alignItems:"center",
+
   },
   filter: {
     "&:before": {

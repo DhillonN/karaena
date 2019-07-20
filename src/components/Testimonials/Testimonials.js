@@ -33,7 +33,7 @@ const Testimonials = ({ classes, testimonialsData }) => {
                 <Card plain key={i} className={classes.card}>
                 <CardBody testimonials>
                     <span
-                      className={classes.description}
+                      className={classNames(classes.description,classes.quote)}
                       dangerouslySetInnerHTML={{
                         __html: node.body.processed,
                       }}
