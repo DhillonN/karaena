@@ -143,16 +143,7 @@ const title = {
   textDecoration: "none",
   fontWeight: "100",
   fontFamily: `"Roboto Slab", "Times New Roman", serif`,
-  fontSize:"0.8rem",
-  "@media (min-width: 576px)": {
-    fontSize:"0.9rem",
-  },
-  "@media (min-width: 768px)": {
-    fontSize:"1rem",
-  },
-  "@media (min-width: 992px)": {
-    fontSize:"1.5rem",
-  },
+  fontSize:"1.5rem",
   "@media (min-width: 1200px)": {
     fontSize:"2.5rem",
   }

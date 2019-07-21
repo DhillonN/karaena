@@ -24,14 +24,13 @@ class projectsSection extends React.Component {
   render() {
     const projectsData = this.props.projectsData
     const { classes } = this.props
-    const animations=['zoom-in-right','zoom-in-up','zoom-in-left','flip-right','flip-up','flip-left']
     var counter=0;
     return (
       <section id="works" >
         <h2 className={classNames(classes.projectTitle)}>My Work</h2>
         <Grid className={classes.container}>
           {projectsData.edges.map(({ node }, i) => (
-            <div data-aos={animations[counter++]} key={i}>
+            <div data-aos='flip-right' key={i}>
             <Link to={`/${node.title.replace(/\s/g,'-')}`}>
               <GridItems
                 xs={12}

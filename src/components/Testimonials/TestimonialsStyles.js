@@ -10,6 +10,9 @@ import {
       zIndex: "12",
       color: "#FFFFFF",
       ...container,
+      "@media (min-width:576px)":{
+width:"95%",
+      },
     },
     title: {
       ...title,

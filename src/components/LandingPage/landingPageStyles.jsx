@@ -41,9 +41,10 @@ const landingPageStyle = {
     fontSize: "1rem",
     maxWidth: "100%",
     margin: "10px auto 0",
-    color:"#000",
+    color:"#fff",
     textAlign:"center",
     fontFamily: "'Montserrat', sans-serif",
+    fontWeight:"500",
     "@media (min-width: 576px)": {
       fontSize:"1rem"
      },
