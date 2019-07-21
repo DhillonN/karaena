@@ -28,7 +28,7 @@ exports.createPages = ({ graphql, actions }) => {
     }
   `).then(projects => {
     projects.data.allNodeProjects.edges.forEach(({ node }) => {
-      var pathString=(node.title).replace(/\s/g,'');
+      var pathString=(node.title).replace(/\s/g,'-');
       console.warn(pathString);
       createPage({
         path: pathString,

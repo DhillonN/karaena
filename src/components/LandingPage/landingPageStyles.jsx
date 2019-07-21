@@ -3,6 +3,7 @@ import {
   title,
   cardTitle,
   karaenaGold,
+  karaenaFilter,
 } from "../../assets/global"
 import imageStyle from "../../assets/imagesStyles"
 const landingPageStyle = {
@@ -17,8 +18,8 @@ const landingPageStyle = {
     position: "relative",
     marginTop: "30px",
     minHeight: "32px",
-    color: "#ffff",
-    fontWeight:"300",
+    color: "#000",
+    fontWeight:"600",
     textDecoration: "none",
     fontFamily: "'Montserrat', sans-serif",
     width:"100%",
@@ -40,7 +41,7 @@ const landingPageStyle = {
     fontSize: "1rem",
     maxWidth: "100%",
     margin: "10px auto 0",
-    color:"#ffff",
+    color:"#000",
     textAlign:"center",
     fontFamily: "'Montserrat', sans-serif",
     "@media (min-width: 576px)": {
@@ -104,7 +105,15 @@ const landingPageStyle = {
   },
   mainLinks:{
     color:karaenaGold,
-  }
+  },
+  filter:{
+    backgroundColor:karaenaFilter,
+    width:"100%"
+  },
+  button:{
+    fontSize:"1.2rem",
+    color:"#000"
+  },
 }
 
 export default landingPageStyle

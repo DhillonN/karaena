@@ -57,6 +57,7 @@ const infoColor = "#00acc1";
 const roseColor = "#e91e63";
 const grayColor = "#999999";
 const karaenaGold="#d69e5a";
+const karaenaFilter="#d69e5a87";
 
 const primaryBoxShadow = {
   boxShadow:
@@ -142,7 +143,19 @@ const title = {
   textDecoration: "none",
   fontWeight: "100",
   fontFamily: `"Roboto Slab", "Times New Roman", serif`,
-  fontSize:"2.5rem"
+  fontSize:"0.8rem",
+  "@media (min-width: 576px)": {
+    fontSize:"0.9rem",
+  },
+  "@media (min-width: 768px)": {
+    fontSize:"1rem",
+  },
+  "@media (min-width: 992px)": {
+    fontSize:"1.5rem",
+  },
+  "@media (min-width: 1200px)": {
+    fontSize:"2.5rem",
+  }
 };
 
 const cardTitle = {
@@ -228,5 +241,6 @@ export {
   cardLink,
   cardSubtitle,
   karaenaGold,
+  karaenaFilter,
   underline,
 };

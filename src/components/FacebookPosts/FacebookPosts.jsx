@@ -8,8 +8,7 @@ import Gallery from '../collection/Gallery'
 class FacebookPosts extends React.Component {
 
   render() {
-    const postData = this.props.postData
-    const { classes } = this.props
+    const { classes, postData } = this.props;
     return (
       <Layout>
         <div className={classNames(classes.main, classes.mainRaised)}>

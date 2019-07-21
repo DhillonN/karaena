@@ -15,7 +15,7 @@ const cardStyle = {
     wordWrap: "break-word",
     fontSize: ".875rem",
     transition: "all 300ms linear",
-    
+
   },
   cardPlain: {
     background: "transparent",
@@ -26,8 +26,8 @@ const cardStyle = {
   },
   cardSquare:{
     boxShadow:"none",
-    width:"70vw",
-    height:"70vw",
+    width:"100vw",
+    height:"100vw",
     alignText:"center",
     "@media (min-width: 576px)": {
       width: "40vw",

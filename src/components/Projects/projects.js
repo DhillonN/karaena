@@ -32,7 +32,7 @@ class projectsSection extends React.Component {
         <Grid className={classes.container}>
           {projectsData.edges.map(({ node }, i) => (
             <div data-aos={animations[counter++]} key={i}>
-            <Link to={`/${node.title.replace(/\s/g,'')}`}>
+            <Link to={`/${node.title.replace(/\s/g,'-')}`}>
               <GridItems
                 xs={12}
                 sm={12}

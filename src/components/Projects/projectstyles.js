@@ -1,8 +1,8 @@
 import {
-
     title,
     karaenaGold,
     lightKaraenaGold,
+    karaenaFilter,
 
   } from "../../assets/global"
   import imageStyle from "../../assets/imagesStyles"
@@ -21,6 +21,7 @@ import {
       color:karaenaGold,
       padding:"3rem",
       fontSize:"2.5rem",
+
     },
     title: {
       ...title,
@@ -30,8 +31,6 @@ import {
       minHeight: "32px",
       color: karaenaGold,
       textDecoration: "none",
-      fontSize:"1.9rem"
-
     },
     ...imageStyle,
     imgRaised:{

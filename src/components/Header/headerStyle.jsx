@@ -29,7 +29,9 @@ const headerStyle = {
     flexFlow: "row nowrap",
     justifyContent: "flex-start",
     position: "relative",
-    zIndex: "unset"
+    zIndex: "unset",
+    maxWidth:"100vw",
+    left:0,
   },
   logo:{
     width: "25%",
@@ -63,13 +65,17 @@ const headerStyle = {
   title: {
     ...defaultFont,
     lineHeight: "30px",
-    fontSize: "1rem",
+    fontSize: "0.8rem",
     borderRadius: "3px",
     textTransform: "none",
     color: "inherit",
     padding: "0",
     color:karaenaGold,
     "@media (min-width: 576px)": {
+      fontSize:"1.5rem",
+      padding: "8px 16px",
+    },
+    "@media (min-width: 1700px)": {
       fontSize:"2rem",
       padding: "8px 16px",
     },
