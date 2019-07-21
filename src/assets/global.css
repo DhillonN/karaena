@@ -9,6 +9,8 @@ body{
 }
 section{
     margin-top: 10vh;
-
-
+  }
+  .slick-next,.slick-prev{
+      left:0;
+      right: 0;
   }

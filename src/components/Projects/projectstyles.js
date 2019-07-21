@@ -9,6 +9,11 @@ const projectStyle = {
   container: {
     zIndex: "12",
     color: "#FFFFFF",
+    margin:0,
+    "@media (min-width:576px)":{
+      marginLeft:"-8px",
+      marginRight:"-8px",
+    },
   },
   projectTitle: {
     ...title,
@@ -55,11 +60,14 @@ const projectStyle = {
     marginRight: "auto",
     maxWidth: "100%",
     transition: "all ease-in-out 1.2s",
+    padding:0,
     "@media (min-width:576px)": {
       "&:hover": {
         transform: "scale(1.1)",
         transition: "ease-in-out 1.2s",
       },
+      paddingLeft:"15px",
+      paddingRight:"15px",
     },
   },
   description: {

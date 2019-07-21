@@ -8,6 +8,9 @@ import { createMuiTheme, MuiThemeProvider } from "@material-ui/core/styles"
 import { karaenaGold } from "../assets/global"
 import '../assets/global.css'
 import Seo from '../components/seo'
+import Footer from '../components/Footer/Footer'
+import {TinyButton as Scrolltop} from "react-scroll-up-button"
+import Ctafab from '../components/fab/ctafab'
 const theme = createMuiTheme({
   palette: {
     primary: {
@@ -25,6 +28,18 @@ const layout = ({ children }) => (
   <CssBaseLine/>
     <Header fixed={true} brand="KARAENA VINCENT PHOTOGRAPHER" rightLinks={<HeaderLinks />} />
     <main>{children}</main>
+    <Scrolltop
+    StopPosition={0}
+    ShowAtPosition={150}
+    EasingType='easeOutCubic'
+    AnimationDuration={500}
+    ContainerClassName='ScrollUpButton__Container'
+    TransitionClassName='ScrollUpButton__Toggled'
+    style={{fill:karaenaGold,backgroundColor:"transparent"}}
+    ToggledStyle={{}}
+    />
+<Ctafab/>
+    <Footer/>
     </MuiThemeProvider>
   </>
 )

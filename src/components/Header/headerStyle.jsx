@@ -65,7 +65,7 @@ const headerStyle = {
   title: {
     ...defaultFont,
     lineHeight: "30px",
-    fontSize: "1rem",
+    fontSize: "0.9rem",
     borderRadius: "3px",
     textTransform: "none",
     color: "inherit",
@@ -80,7 +80,7 @@ const headerStyle = {
       padding: "8px 16px",
     },
     "&:hover,&:focus": {
-      color: "inherit",
+      color: karaenaGold,
       background: "transparent",
     }
   },

@@ -7,10 +7,13 @@ const style = {
   grid: {
     position: "relative",
     minHeight: "1px",
-    paddingRight: "15px",
-    paddingLeft: "15px",
+   padding:0,
     flexBasis: "auto",
-    overflow:"hidden"
+    overflow:"hidden",
+    "@media (min-width:576px)":{
+      paddingRight: "15px",
+    paddingLeft: "15px",
+    }
   }
 };
 
