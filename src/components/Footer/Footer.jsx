@@ -25,13 +25,13 @@ function Footer({ ...props }) {
   return (
     <footer className={footerClasses}>
       <div className={classes.container}>
-        <div className={classes.left}>
-          <List className={classes.list}>
-            <ListItem>Phone</ListItem>
-
-          </List>
-        </div>
         <div className={classes.right}>
+
+        {" "}  39 Green Lane Motueka, Nelson Tasman, 021796055, info@karaenavincent.com
+
+
+        </div>
+        <div className={classes.left}>
           &copy; {1900 + new Date().getYear()}
         {" "}Karaena Vincent Photography
         </div>

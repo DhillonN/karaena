@@ -1,5 +1,6 @@
 import React from "react"
-import { Container, Button, Link } from "react-floating-action-button"
+import Button from "../CustomButtons/Button"
+import {Link} from 'gatsby'
 import Call from "@material-ui/icons/Call"
 import Email from "@material-ui/icons/Email"
 import Chat from "@material-ui/icons/Chat"
@@ -10,23 +11,20 @@ import { FacebookProvider, CustomChat, MessageUs, Feed } from 'dhillon-react-fac
 class ContactPage extends React.Component {
   render() {
   const {classes}=this.props
-  console.log(classes)
     return (
         <>
         <FacebookProvider appId="417448411986006" chatSupport={true}>
-
-
-      <Container className={classes.container}>
-        <Link styles={{}}className={classes.chat} href="mailto:info@karaenavincent.com" tooltip="Email Me">
+      <div className={classes.container}>
+        <Link className={classes.chat} href="mailto:info@karaenavincent.com" tooltip="Email">
           <Email />
         </Link>
-        <Button styles={{}}className={classes.chat} tooltip="Call Me" href="tel:006421796055">
+        <Button color="primary" className={classes.chat} tooltip="Call" href="tel:006421796055">
           <Call />
         </Button>
-        <Button  styles={{}}className={classes.chat} tooltip="Contact Me">
+        <Button  styles={{}}className={classes.chat} tooltip="Contact">
         <CustomChat minimized={true} themeColor={karaenaGold} pageId="135947143102513"/>
         </Button>
-      </Container> </FacebookProvider>
+      </div> </FacebookProvider>
       </>
     )
   }
