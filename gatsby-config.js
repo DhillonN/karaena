@@ -4,6 +4,7 @@ module.exports = {
     description: `Karaena Vincent Photography official website`,
     author: `@dhillonn`,
     siteURL: `https://karaenavincent.co.nz`,
+    siteUrl: `https://karaenavincent.co.nz`,
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
