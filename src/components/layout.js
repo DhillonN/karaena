@@ -38,7 +38,7 @@ const layout = ({ children }) => (
     style={{fill:karaenaGold,backgroundColor:"transparent"}}
     ToggledStyle={{}}
     />
-<Ctafab/>
+
     <Footer/>
     </MuiThemeProvider>
   </>

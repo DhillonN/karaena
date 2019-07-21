@@ -5,31 +5,26 @@ import Email from "@material-ui/icons/Email"
 import Chat from "@material-ui/icons/Chat"
 import withStyles from "@material-ui/core/styles/withStyles"
 import PageStyles from './ContactStyles'
-import { FacebookProvider, Like, MessageUs, Feed } from 'react-facebook';
+import {karaenaGold} from '../../assets/global'
+import { FacebookProvider, CustomChat, MessageUs, Feed } from 'dhillon-react-facebook';
 class ContactPage extends React.Component {
   render() {
   const {classes}=this.props
   console.log(classes)
     return (
         <>
-        <FacebookProvider appId="417448411986006">
-       
-        <Feed link="https://www.facebook.com/karaenavincentphotography/">
-          {({ handleClick }) => (
-            <button type="button" onClick={handleClick}>Share on Feed</button>
-          )}
-        </Feed>
+        <FacebookProvider appId="417448411986006" chatSupport={true}>
+
+
       <Container className={classes.container}>
-        <Link styles={{}}className={classes.chat} href="#" tooltip="Email Me">
+        <Link styles={{}}className={classes.chat} href="mailto:info@karaenavincent.com" tooltip="Email Me">
           <Email />
         </Link>
-        <Button styles={{}}className={classes.chat} tooltip="Call Me" onClick={() => alert("Calling......")}>
+        <Button styles={{}}className={classes.chat} tooltip="Call Me" href="tel:006421796055">
           <Call />
-        </Button> 
-        <Like href="https://www.facebook.com/karaenavincentphotography/" colorScheme="dark" showFaces />
-       
+        </Button>
         <Button  styles={{}}className={classes.chat} tooltip="Contact Me">
-        <MessageUs size="standard" color="white" messengerAppId="417448411986006" pageId="135947143102513"/>
+        <CustomChat minimized={true} themeColor={karaenaGold} pageId="135947143102513"/>
         </Button>
       </Container> </FacebookProvider>
       </>

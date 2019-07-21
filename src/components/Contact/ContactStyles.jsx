@@ -1,4 +1,4 @@
-import { karaenaGold } from "../../assets/jss/material-kit-react"
+import { karaenaGold } from "../../assets/global"
 
 
 const ContactStyles = {
@@ -8,7 +8,7 @@ const ContactStyles = {
   },
   container:{
       right:0,
-      bottom:"4px",
+      bottom:"5%",
       zIndex:"150"
   }
 }
