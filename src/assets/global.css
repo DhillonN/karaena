@@ -1,16 +1,31 @@
 @import "~slick-carousel/slick/slick.css";
 @import "~slick-carousel/slick/slick-theme.css";
 
-body{
-    font-family:  'Montserrat', sans-serif;
+body {
+  font-family: "Montserrat", sans-serif;
 }
-.react-Images__positioner{
-    z-Index: '1200';
+.react-Images__positioner {
+  z-index: "1200";
 }
-section{
-    margin-top: 10vh;
-  }
-  .slick-next,.slick-prev{
-      left:0;
-      right: 0;
-  }
+section {
+  margin-top: 10vh;
+}
+.slick-next,
+.slick-prev {
+  left: 0;
+  right: 0;
+}
+.fabContainer {
+  position: fixed;
+  display: flex;
+  flex-flow: column;
+  right: 0;
+  bottom: 20%;
+  z-index: 150;
+  text-align: Center;
+  background: blue;
+  padding:1rem;
+}
+.fabContainer aside{
+    right: 0 !important;
+}

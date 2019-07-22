@@ -36,56 +36,9 @@ function HeaderLinks({ ...props }) {
        <span className={classes.underline}></span>
       </ListItem>
       <ListItem className={classes.listItem}>
-        <Tooltip
-          id="instagram-twitter"
-          title="Follow me on linked in"
-          placement={typeof window !== 'undefined' && window.innerWidth > 959 ? "top" : "left"}
-          classes={{ tooltip: classes.tooltip }}
-        >
-          <Button
-            href="https://www.linkedin.com/in/karaena-vincent-456b44123/"
-            target="_blank"
-            color="transparent"
-            className={classes.navLink}
-          >
-            <FaLinkedin/>
-          </Button>
-        </Tooltip>
+       <p className={classes.topCall}> CALL +64 21796 055</p>
       </ListItem>
-      <ListItem className={classes.listItem}>
-        <Tooltip
-          id="instagram-facebook"
-          title="Follow me on facebook"
-          placement={typeof window !== 'undefined' && window.innerWidth > 959 ? "top" : "left"}
-          classes={{ tooltip: classes.tooltip }}
-        >
-          <Button
-            color="transparent"
-            href="https://www.facebook.com/karaenavincentphotography"
-            target="_blank"
-            className={classes.navLink}
-          >
-            <FaFacebook/>
-          </Button>
-        </Tooltip>
-      </ListItem>
-      <ListItem className={classes.listItem}>
-        <Tooltip
-          id="instagram-tooltip"
-          title="Follow me on instagram"
-          placement={typeof window !== 'undefined' && window.innerWidth > 959 ? "top" : "left"}
-          classes={{ tooltip: classes.tooltip }}
-        >
-          <Button
-            color="transparent"
-            href="https://www.instagram.com/karaenavincent_photography"
-            target="_blank"
-            className={classes.navLink}
-          >
-            <FaInstagram/>
-          </Button>
-        </Tooltip>
-      </ListItem>
+
     </List>
   );
 }

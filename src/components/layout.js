@@ -10,7 +10,7 @@ import '../assets/global.css'
 import Seo from '../components/seo'
 import Footer from '../components/Footer/Footer'
 import {TinyButton as Scrolltop} from "react-scroll-up-button"
-import Ctafab from '../components/fab/ctafab'
+import ContactFAB from '../components/Contact/Contact'
 const theme = createMuiTheme({
   palette: {
     primary: {
@@ -28,6 +28,8 @@ const layout = ({ children }) => (
   <CssBaseLine/>
     <Header fixed={true} brand="KARAENA VINCENT PHOTOGRAPHER" rightLinks={<HeaderLinks />} />
     <main>{children}</main>
+    <div className="fabContainer">
+    <ContactFAB/>
     <Scrolltop
     StopPosition={0}
     ShowAtPosition={150}
@@ -38,7 +40,7 @@ const layout = ({ children }) => (
     style={{fill:karaenaGold,backgroundColor:"transparent"}}
     ToggledStyle={{}}
     />
-
+</div>
     <Footer/>
     </MuiThemeProvider>
   </>

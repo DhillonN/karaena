@@ -1,36 +1,49 @@
 import React from "react"
 import Button from "../CustomButtons/Button"
-import {Link} from 'gatsby'
 import Call from "@material-ui/icons/Call"
 import Email from "@material-ui/icons/Email"
-import Chat from "@material-ui/icons/Chat"
 import withStyles from "@material-ui/core/styles/withStyles"
-import PageStyles from './ContactStyles'
-import {karaenaGold} from '../../assets/global'
-import { FacebookProvider, CustomChat, MessageUs, Feed } from 'dhillon-react-facebook';
+import PageStyles from "./ContactStyles"
+import { karaenaGold } from "../../assets/global"
+import {
+  FacebookProvider,
+  CustomChat,
+} from "dhillon-react-facebook"
 class ContactPage extends React.Component {
   render() {
-  const {classes}=this.props
+    const { classes } = this.props
     return (
-        <>
+      <>
         <FacebookProvider appId="417448411986006" chatSupport={true}>
-      <div className={classes.container}>
-        <Link className={classes.chat} href="mailto:info@karaenavincent.com" tooltip="Email">
-          <Email />
-        </Link>
-        <Button color="primary" className={classes.chat} tooltip="Call" href="tel:006421796055">
-          <Call />
-        </Button>
-        <Button  styles={{}}className={classes.chat} tooltip="Contact">
-        <CustomChat minimized={true} themeColor={karaenaGold} pageId="135947143102513"/>
-        </Button>
-      </div> </FacebookProvider>
+          <a
+            className={classes.links}
+            href="mailto:info@karaenavincent.com"
+            tooltip="Email"
+          >
+            <Email className={classes.icons} />
+          </a>
+          <a
+            color="primary"
+            className={classes.links}
+            tooltip="Call"
+            href="tel:006421796055"
+          >
+            <Call className={classes.icons} />
+          </a>
+
+          <CustomChat
+            minimized={true}
+            themeColor={karaenaGold}
+            pageId="135947143102513"
+          />
+        </FacebookProvider>
       </>
     )
   }
 }
-export default withStyles(PageStyles) (ContactPage)
-{/*<!-- Load Facebook SDK for JavaScript -->
+export default withStyles(PageStyles)(ContactPage)
+{
+  /*<!-- Load Facebook SDK for JavaScript -->
 <div id="fb-root"></div>
 <script>
   window.fbAsyncInit = function() {
@@ -52,4 +65,5 @@ export default withStyles(PageStyles) (ContactPage)
 <div class="fb-customerchat"
   attribution=setup_tool
   page_id="135947143102513">
-</div>*/}
+</div>*/
+}

@@ -9,7 +9,6 @@ import classNames from 'classnames'
 import withStyles from '@material-ui/styles/withStyles'
 import mainStyles from '../components/mainStyles'
 import About from "../components/About/About"
-import Contact from "../components/Contact/Contact"
 const index=({data,classes})=>(
 <Layout>
   <Landingpage pagedata={data.nodeFrontPage}/>
@@ -17,7 +16,6 @@ const index=({data,classes})=>(
 <Projects projectsData={data.allNodeProjects}></Projects>
 <About aboutData={data.nodeAboutPage}/>
 <Testimonials testimonialsData={data.allNodeTestimonials}/>
-<Contact/>
 </div>
 </Layout>
 
