@@ -35,3 +35,8 @@ section {
     right: 0 !important;
     bottom: 5% !important;
 }
+.fb_reset>div {
+  overflow: hidden;
+  right: 0!important;
+  bottom: 10%!important;
+}
