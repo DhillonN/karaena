@@ -17,15 +17,21 @@ section {
 }
 .fabContainer {
   position: fixed;
-  display: flex;
-  flex-flow: column;
-  right: 0;
-  bottom: 20%;
-  z-index: 150;
-  text-align: Center;
-  background: blue;
-  padding:1rem;
+  color: white;
+    display: flex;
+    flex-flow: row nowrap;
+    text-decoration: none;
+    line-height: 1;
+    font-size: 0;
+    width: 100%;
+    text-align: center;
+    align-items: center;
+    background-color: #d69e5a;
+    bottom: 0;
+    z-index: 1000;
+
 }
 .fabContainer aside{
     right: 0 !important;
+    bottom: 5% !important;
 }

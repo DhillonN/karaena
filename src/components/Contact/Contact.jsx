@@ -21,6 +21,7 @@ class ContactPage extends React.Component {
             tooltip="Email"
           >
             <Email className={classes.icons} />
+            info@karaenavincent.com
           </a>
           <a
             color="primary"
@@ -29,6 +30,7 @@ class ContactPage extends React.Component {
             href="tel:006421796055"
           >
             <Call className={classes.icons} />
+            +64 21786055
           </a>
 
           <CustomChat
