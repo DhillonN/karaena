@@ -1,5 +1,4 @@
 import React from "react"
-import Img from "gatsby-image"
 import withStyles from "@material-ui/styles/withStyles"
 import aboutStyles from "./aboutStyles"
 

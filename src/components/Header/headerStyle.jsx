@@ -65,10 +65,9 @@ const headerStyle = {
   title: {
     ...defaultFont,
     lineHeight: "30px",
-    fontSize: "0.9rem",
+    fontSize: "0.7rem",
     borderRadius: "3px",
     textTransform: "none",
-    color: "inherit",
     padding: "0",
     color:karaenaGold,
     "@media (min-width: 576px)": {

@@ -1,5 +1,5 @@
 import { container, primaryColor, defaultFont } from "../../assets/global";
-import tooltip from "../../assets/tooltipsStyle.jsx";
+
 
 const footerStyle = theme=>( {
   block: {
@@ -14,13 +14,12 @@ const footerStyle = theme=>( {
     display: "block"
   },
   left: {
-    float: "left!important",
     display: "block"
   },
   right: {
     padding: "15px 0",
     margin: "0",
-    float: "right!important"
+    display:"flex",
   },
   footer: {
     padding: "0.9375rem 0",
@@ -39,7 +38,13 @@ const footerStyle = theme=>( {
       color: "#FFFFFF"
     }
   },
-  container,
+  container:{
+    ...container,
+    display:"flex",
+    flexFlow:"row nowrap",
+    justifyContent:"space-between",
+    alignItems:"center",
+  },
   list: {
     ...defaultFont,
     fontSize: "14px",

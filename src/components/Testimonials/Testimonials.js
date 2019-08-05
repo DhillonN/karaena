@@ -5,8 +5,6 @@ import withStyles from "@material-ui/core/styles/withStyles"
 import PageStyles from "./TestimonialsStyles"
 import Card from "../Card/Card"
 import CardBody from "../Card/CardBody"
-import Grid from "../Grid/GridContainer"
-import GridItems from "../Grid/GridItem"
 import Image from "gatsby-image"
 
 const Testimonials = ({ classes, testimonialsData }) => {

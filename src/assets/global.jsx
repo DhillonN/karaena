@@ -58,6 +58,7 @@ const roseColor = "#e91e63";
 const grayColor = "#999999";
 const karaenaGold="#d69e5a";
 const karaenaFilter="#d69e5a87";
+const lightKaraenaGold="#d4a974";
 
 const primaryBoxShadow = {
   boxShadow:
@@ -233,5 +234,6 @@ export {
   cardSubtitle,
   karaenaGold,
   karaenaFilter,
+  lightKaraenaGold,
   underline,
 };

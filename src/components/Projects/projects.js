@@ -25,7 +25,6 @@ class projectsSection extends React.Component {
   render() {
     const projectsData = this.props.projectsData
     const { classes } = this.props
-    var counter=0;
     return (
       <section id="works" >
         <h2 className={classNames(classes.projectTitle)}>My Work</h2>

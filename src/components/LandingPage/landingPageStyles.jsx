@@ -115,6 +115,14 @@ const landingPageStyle = {
     fontSize:"1.2rem",
     color:"#000"
   },
+  secButton:{
+    display:"none",
+    "@media (min-width:1024px)":{
+    display:"flex",
+    flexFlow:"row nowrap",
+    }
+
+  }
 }
 
 export default landingPageStyle

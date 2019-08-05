@@ -25,8 +25,8 @@ class BlogList extends React.Component{
           <div className={classes.column}>
 
             <Card key={node.id}  className={classes.containerCard}>
-                  <Link  className={classes.postLink} to={`/${node.id}`}>
-                    <div key={i.toString()} >
+                  <Link key={i.toString()}  className={classes.postLink} to={`/${node.id}`}>
+                    <div>
                       {node.relationships.field_sp_image ? (
                         <Image
                           className={classes.imgRaised}

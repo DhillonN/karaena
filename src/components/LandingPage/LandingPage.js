@@ -32,6 +32,26 @@ class LandingPage extends React.Component {
           >
             Book your free consultation
           </Button>
+
+          <div className={classes.secButton}>
+            <Button
+              className={classes.button}
+              size="sm"
+              color="primary"
+              href="tel:+6421796055"
+            >
+              CALL +64 21796 055
+            </Button>
+
+            <Button
+              className={classes.button}
+              size="sm"
+              color="primary"
+              href="mailto:info@karaenavincent.com"
+            >
+              email info@karaenavincent.com
+            </Button>
+          </div>
         </Parallax>
       </>
     )

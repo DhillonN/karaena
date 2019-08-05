@@ -1,6 +1,4 @@
 import {
-  title,
-  cardTitle,
   main,
   mainRaised
 } from "../../assets/global"

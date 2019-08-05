@@ -2,7 +2,6 @@ import {
   title,
   karaenaGold,
   lightKaraenaGold,
-  karaenaFilter,
 } from "../../assets/global"
 import imageStyle from "../../assets/imagesStyles"
 const projectStyle = {
@@ -73,6 +72,7 @@ const projectStyle = {
   description: {
     color: "#999",
     textAlign: "center",
+    paddingTop: "12px",
   },
   section: {
     padding: "70px 0",

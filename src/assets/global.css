@@ -9,6 +9,11 @@ body {
 }
 section {
   margin-top: 10vh;
+  margin-bottom: 5vh;
+  min-height: 100vh;
+}
+section:nth-last-child(1){
+margin-bottom: 0;
 }
 .slick-next,
 .slick-prev {
@@ -29,7 +34,11 @@ section {
     background-color: #d69e5a;
     bottom: 0;
     z-index: 1000;
-
+}
+@media only screen and (min-width:1024px){
+.fabContainer{
+  display: none;
+}
 }
 .fabContainer aside{
     right: 0 !important;

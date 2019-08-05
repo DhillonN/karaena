@@ -4,7 +4,7 @@ import React from "react";
 import PropTypes from "prop-types";
 // nodejs library that concatenates classes
 import classNames from "classnames";
-import { List, ListItem, withStyles } from "@material-ui/core";
+import { ListItem, withStyles } from "@material-ui/core";
 import { FaPhone as Phone, FaFacebook, FaInstagram,FaLinkedin } from 'react-icons/fa';
 // @material-ui/icons
 import Favorite from "@material-ui/icons/Favorite";
@@ -18,10 +18,6 @@ function Footer({ ...props }) {
   const { classes, whiteFont } = props;
   const footerClasses = classNames({
     [classes.footer]: true,
-    [classes.footerWhiteFont]: whiteFont
-  });
-  const aClasses = classNames({
-    [classes.a]: true,
     [classes.footerWhiteFont]: whiteFont
   });
   return (
@@ -83,10 +79,14 @@ function Footer({ ...props }) {
 
 
         </div>
+        <div className={classes.address}>
+          <p>39 Green Lane Motueka, 7120 Nelson Tasman New Zealand.</p>
+        </div>
         <div className={classes.left}>
           &copy; {1900 + new Date().getYear()}
        Karaena Vincent Photography
         </div>
+
 
       </div>
     </footer>

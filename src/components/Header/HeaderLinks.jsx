@@ -2,12 +2,10 @@
 import React from "react";
 // react components for routing our app without refresh
 import { Link } from "gatsby";
-import classNames from 'classnames'
 // @material-ui/core components
 import withStyles from "@material-ui/core/styles/withStyles";
 import List from "@material-ui/core/List";
 import ListItem from "@material-ui/core/ListItem";
-import Tooltip from "@material-ui/core/Tooltip";
 
 // @material-ui/icons
 
@@ -35,10 +33,6 @@ function HeaderLinks({ ...props }) {
        <Link to="/blog" className={classes.navLink}> Blog </Link>
        <span className={classes.underline}></span>
       </ListItem>
-      <ListItem className={classes.listItem}>
-       <p className={classes.topCall}> CALL +64 21796 055</p>
-      </ListItem>
-
     </List>
   );
 }
