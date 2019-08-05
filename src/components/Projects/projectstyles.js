@@ -32,9 +32,19 @@ const projectStyle = {
     color: karaenaGold,
     textDecoration: "none",
   },
+  transformImage:{
+  overflow:"hidden",
+  },
   ...imageStyle,
   imgRaised: {
     height: "100%",
+    transition: "all ease-in-out 1.2s",
+    "@media (min-width:576px)": {
+      "&:hover": {
+        transform: "scale(1.1)",
+        transition: "ease-in-out 1s",
+      },
+    },
   },
   subtitle: {
     color: lightKaraenaGold,
@@ -58,13 +68,10 @@ const projectStyle = {
     marginLeft: "auto",
     marginRight: "auto",
     maxWidth: "100%",
-    transition: "all ease-in-out 1.2s",
     padding:0,
+
     "@media (min-width:576px)": {
-      "&:hover": {
-        transform: "scale(1.1)",
-        transition: "ease-in-out 1.2s",
-      },
+overflow:"hidden",
       paddingLeft:"15px",
       paddingRight:"15px",
     },

@@ -40,8 +40,8 @@ margin-bottom: 0;
   display: none;
 }
 }
-.fabContainer aside{
-    right: 0 !important;
+aside{
+    right: 15px !important;
     bottom: 5% !important;
 }
 .fb_reset>div {

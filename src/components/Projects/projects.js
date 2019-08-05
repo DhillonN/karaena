@@ -42,6 +42,7 @@ class projectsSection extends React.Component {
                 <Card
 
                   square
+                  className={classes.transformImage}
                 >
                   <Image
                     fluid={

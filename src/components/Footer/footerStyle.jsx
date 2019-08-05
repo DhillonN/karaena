@@ -41,9 +41,16 @@ const footerStyle = theme=>( {
   container:{
     ...container,
     display:"flex",
-    flexFlow:"row nowrap",
-    justifyContent:"space-between",
+    flexFlow:"row wrap",
+    justifyContent:"center",
     alignItems:"center",
+    padding:"0",
+    fontSize:"0.5rem !important",
+    "@media (min-width:1024px)":{
+      flexFlow:"row nowrap",
+      justifyContent:"space-between",
+      fontSize:"unset !important"
+    }
   },
   list: {
     ...defaultFont,
