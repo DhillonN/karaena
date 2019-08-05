@@ -27,7 +27,7 @@ class projectsSection extends React.Component {
     const { classes } = this.props
     return (
       <section id="works" >
-        <h2 className={classNames(classes.projectTitle)}>My Work</h2>
+        <h2 className={classNames(classes.projectTitle)}>Portfolio</h2>
         <Grid className={classes.container}>
           {projectsData.edges.map(({ node }, i) => (
             <div data-aos='flip-right' key={i}>

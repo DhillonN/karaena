@@ -4,11 +4,9 @@ import React from "react";
 import PropTypes from "prop-types";
 // nodejs library that concatenates classes
 import classNames from "classnames";
-import { ListItem, withStyles } from "@material-ui/core";
+import { List, ListItem, withStyles } from "@material-ui/core";
 import { FaPhone as Phone, FaFacebook, FaInstagram,FaLinkedin } from 'react-icons/fa';
 // @material-ui/icons
-import Favorite from "@material-ui/icons/Favorite";
-
 import footerStyle from "./footerStyle.jsx";
 import Tooltip from '@material-ui/core/Tooltip/Tooltip'
 import Button from '../CustomButtons/Button'
@@ -24,7 +22,7 @@ function Footer({ ...props }) {
     <footer className={footerClasses}>
       <div className={classes.container}>
         <div className={classes.right}>
-
+      <List>
         <ListItem className={classes.listItem}>
         <Tooltip
           id="instagram-twitter"
@@ -35,6 +33,7 @@ function Footer({ ...props }) {
           <Button
             href="https://www.linkedin.com/in/karaena-vincent-456b44123/"
             target="_blank"
+            rel="noopener noreferrer"
             color="transparent"
             className={classes.navLink}
           >
@@ -53,6 +52,7 @@ function Footer({ ...props }) {
             color="transparent"
             href="https://www.facebook.com/karaenavincentphotography"
             target="_blank"
+            rel="noopener noreferrer"
             className={classes.navLink}
           >
             <FaFacebook/>
@@ -70,13 +70,14 @@ function Footer({ ...props }) {
             color="transparent"
             href="https://www.instagram.com/karaenavincent_photography"
             target="_blank"
+            rel="noopener noreferrer"
             className={classes.navLink}
           >
             <FaInstagram/>
           </Button>
         </Tooltip>
       </ListItem>
-
+      </List>
 
         </div>
         <div className={classes.address}>

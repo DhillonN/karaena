@@ -2,7 +2,6 @@ import {
     container,
     title,
     cardTitle,
-    karaenaGold
   } from "../../assets/global"
   import imageStyle from "../../assets/imagesStyles"
   const TestimonialsStyle = {
@@ -22,7 +21,6 @@ width:"95%",
       position: "relative",
       marginTop: "30px",
       minHeight: "32px",
-      color: karaenaGold,
       textDecoration: "none",
     },
     ...imageStyle,
@@ -74,7 +72,7 @@ width:"100%",
 
     },
     description: {
-      color: "#999",
+      color: "#343434",
       fontSize:"1rem",
       fontWeight:"300",
       textAlign:"justify",

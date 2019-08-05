@@ -29,6 +29,7 @@ class LandingPage extends React.Component {
             color="primary"
             href="https://app.acuityscheduling.com/schedule.php?owner=17979620"
             target="_blank"
+            rel="noopener noreferrer"
           >
             Book your free consultation
           </Button>
@@ -36,7 +37,7 @@ class LandingPage extends React.Component {
           <div className={classes.secButton}>
             <Button
               className={classes.button}
-              size="sm"
+              size="lg"
               color="primary"
               href="tel:+6421796055"
             >
@@ -45,7 +46,7 @@ class LandingPage extends React.Component {
 
             <Button
               className={classes.button}
-              size="sm"
+              size="lg"
               color="primary"
               href="mailto:info@karaenavincent.com"
             >

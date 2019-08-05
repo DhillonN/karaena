@@ -32,7 +32,6 @@ title:{
     display:"block",
     width:"100%",
     textAlign:"center",
-    color:karaenaGold,
     padding:"3rem",
     fontSize:"2.5rem",
   },

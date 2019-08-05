@@ -19,7 +19,6 @@ const projectStyle = {
     display: "block",
     width: "100%",
     textAlign: "center",
-    color: karaenaGold,
     padding: "3rem",
     fontSize: "2.5rem",
   },
@@ -29,7 +28,6 @@ const projectStyle = {
     position: "relative",
     marginTop: "0px",
     minHeight: "32px",
-    color: karaenaGold,
     textDecoration: "none",
   },
   transformImage:{

@@ -60,7 +60,7 @@ const headerStyle = {
   flex: {
     flex: 0.8,
     textAlign: "center",
-    paddingRight:"5%",
+    paddingRight:"10%",
   },
   title: {
     ...defaultFont,
@@ -69,7 +69,6 @@ const headerStyle = {
     borderRadius: "3px",
     textTransform: "none",
     padding: "0",
-    color:karaenaGold,
     "@media (min-width: 576px)": {
       fontSize:"1.5rem",
       padding: "8px 16px",
