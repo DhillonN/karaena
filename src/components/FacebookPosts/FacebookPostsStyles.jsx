@@ -2,7 +2,6 @@ import {
   title,
   main,
   mainRaised,
-  karaenaGold
 } from "../../assets/global"
 const GalleryStyle = {
   mainRaised:{
@@ -18,7 +17,6 @@ const GalleryStyle = {
     marginTop: "1rem",
     minHeight: "32px",
     height:"fit-content",
-    color: karaenaGold,
     textDecoration: "none",
     maxWidth:"100%",
     overflow:"hidden",
