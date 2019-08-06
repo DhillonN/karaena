@@ -29,8 +29,7 @@ const BlogListStyle = {
   },
   description:{
     padding:"5px",
-    textAlign: "justify",
-    fontSize: "1.25rem",
+    textAlign: "left",
     wordSpacing: "-1px",
     letterSpacing: "0.02px",
   },

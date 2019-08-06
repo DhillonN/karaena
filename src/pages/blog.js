@@ -23,9 +23,11 @@ export const query = graphql`
           field_posted
           field_post {
             processed
+            value
           }
           field_post_description {
             processed
+            value
           }
           field_social_feed_link {
             uri

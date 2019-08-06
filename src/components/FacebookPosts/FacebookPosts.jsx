@@ -13,6 +13,8 @@ class FacebookPosts extends React.Component {
       <Layout>
         <div className={classNames(classes.main, classes.mainRaised)}>
           <h1 className={classes.title}>{postData.title}</h1><br/>
+          {postData.field_post? <p>{postData.field_post.value.replace(/(<p[^>]+?>|<p>|<\/p>)/gim, "")}</p>:""}
+          {postData.field_post_description?<p>{postData.field_post_description.value.replace(/(<p[^>]+?>|<p>|<\/p>)/gim, "")}</p>:""}
           {postData.relationships.field_sp_gallery &&(
           <Gallery images={postData.relationships.field_sp_gallery.map(({ localFile }) => (
               {
