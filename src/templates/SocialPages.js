@@ -30,7 +30,7 @@ nodeSocialPost (id: {eq: $id}) {
           id
           childImageSharp{
             fluid{
-             ...GatsbyImageSharpFluid_withWebp_tracedSVG
+             ...GatsbyImageSharpFluid_withWebp
              presentationWidth
              originalImg
              aspectRatio
@@ -43,7 +43,7 @@ nodeSocialPost (id: {eq: $id}) {
           id
           childImageSharp{
             fluid(maxWidth:1920){
-              ...GatsbyImageSharpFluid_withWebp_tracedSVG
+              ...GatsbyImageSharpFluid_withWebp
               presentationWidth
               originalImg
               aspectRatio

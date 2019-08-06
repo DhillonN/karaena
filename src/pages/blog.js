@@ -16,7 +16,7 @@ export default BlogPage
 
 export const query = graphql`
   query {
-    allNodeSocialPost {
+    allNodeSocialPost(sort: {fields: field_posted, order: DESC}) {
       edges {
         node {
           id
@@ -35,7 +35,7 @@ export const query = graphql`
               localFile {
                 childImageSharp {
                   fluid {
-                    ...GatsbyImageSharpFluid_withWebp_tracedSVG
+                    ...GatsbyImageSharpFluid_withWebp
                   }
                 }
               }
@@ -44,7 +44,7 @@ export const query = graphql`
               localFile {
                 childImageSharp {
                   fluid {
-                    ...GatsbyImageSharpFluid_withWebp_tracedSVG
+                    ...GatsbyImageSharpFluid_withWebp
                   }
                 }
               }
