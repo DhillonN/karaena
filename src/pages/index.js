@@ -4,7 +4,6 @@ import Layout from '../components/layout'
 import Projects from '../components/Projects/projects'
 import Testimonials from '../components/Testimonials/Testimonials'
 import Landingpage from '../components/LandingPage/LandingPage'
-import "typeface-montserrat"
 import classNames from 'classnames'
 import withStyles from '@material-ui/styles/withStyles'
 import mainStyles from '../components/mainStyles'
