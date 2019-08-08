@@ -3,17 +3,17 @@ import Call from "@material-ui/icons/Call"
 import Email from "@material-ui/icons/Email"
 import withStyles from "@material-ui/core/styles/withStyles"
 import PageStyles from "./ContactStyles"
-import { karaenaGold } from "../../assets/global"
+{/*import { karaenaGold } from "../../assets/global"
 import {
   FacebookProvider,
   CustomChat,
-} from "dhillon-react-facebook"
+} from "dhillon-react-facebook"*/}
 class ContactPage extends React.Component {
   render() {
     const { classes } = this.props
     return (
       <>
-        <FacebookProvider appId="417448411986006" chatSupport={true}>
+        {/*<FacebookProvider appId="417448411986006" chatSupport={true}>*/}
           <a
             className={classes.links}
             href="mailto:info@karaenavincent.com"
@@ -32,12 +32,12 @@ class ContactPage extends React.Component {
             +64 21786055
           </a>
 
-          <CustomChat
+      {/*    <CustomChat
             minimized="true"
             themeColor={karaenaGold}
             pageId="135947143102513"
           />
-        </FacebookProvider>
+      </FacebookProvider>*/}
       </>
     )
   }

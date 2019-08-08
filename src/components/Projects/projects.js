@@ -7,11 +7,11 @@ import Grid from "../Grid/GridContainer"
 import GridItems from "../Grid/GridItem"
 import projectStyles from "./projectstyles"
 import { Link } from "gatsby"
-import AOS from "aos"
-import { Watch } from "scrollmonitor-react"
+//import AOS from "aos"
+//import { Watch } from "scrollmonitor-react"
 import "aos/dist/aos.css"
 class projectsSection extends React.Component {
-  componentDidMount() {
+/*  componentDidMount() {
     this.aos = AOS
     this.aos.init({
       duration: 2000,
@@ -20,7 +20,7 @@ class projectsSection extends React.Component {
   }
   componentDidUpdate() {
     this.aos.refresh()
-  }
+  }*/
 
   render() {
     const projectsData = this.props.projectsData
@@ -30,7 +30,7 @@ class projectsSection extends React.Component {
         <h2 className={classNames(classes.projectTitle)}>Portfolio</h2>
         <Grid className={classes.container}>
           {projectsData.edges.map(({ node }, i) => (
-            <div data-aos='flip-right' key={i}>
+            <div key={i}>
             <Link to={`/${node.title.replace(/\s/g,'-')}`}>
               <GridItems
                 xs={12}
@@ -66,4 +66,4 @@ class projectsSection extends React.Component {
     )
   }
 }
-export default Watch(withStyles(projectStyles)(projectsSection))
+export default withStyles(projectStyles)(projectsSection)
