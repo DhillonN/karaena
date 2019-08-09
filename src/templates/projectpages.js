@@ -5,11 +5,50 @@ import Layout from "../components/layout"
 import classNames from "classnames"
 import withStyles from "@material-ui/styles/withStyles"
 import projectStyles from "../components/FacebookPosts/FacebookPostsStyles"
+import Seo from '../components/seo'
 
 const projectpages = ({ data, classes }) => {
   const project = data.nodeProjects
+  const seo=
+  {
+    "@context": "http://schema.org",
+    "@type": "Product",
+    "name": project.title,
+    "description": project.title+" Service.",
+    "image": {
+        "@type": "ImageObject",
+        "representativeOfPage": "True",
+        "url": "https://karaenavincent.co.nz"+project.relationships.field_photo.localFile.childImageSharp.fluid.src,
+        "width": project.relationships.field_photo.localFile.childImageSharp.fluid.presentationWidth,
+        "height": project.relationships.field_photo.localFile.childImageSharp.fluid.presentationHeight
+    },
+    "brand": {
+        "@type": "Brand",
+        "@id": "kvp",
+        "name": "Karaena Vincent Photography",
+        "description": "Professional Photography",
+        "url": "https://karaenavincent.co.nz/",
+        "sameAs": "https:/facebook.com/karaenavincentphotography",
+        "logo": {
+            "@type": "ImageObject",
+            "representativeOfPage": "True",
+            "url": "https://karaenavincent.co.nz/icons/icon-512x512.png",
+            "width": "512",
+            "height": "512"
+        }
+    },
+    "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "5",
+        "ratingCount": "10",
+        "bestRating": "5",
+        "worstRating": "3"
+    }
+};
   return (
     <Layout>
+      <Seo productSEO={seo}/>
+
       <div className={classNames(classes.main, classes.mainRaised)}>
         <h1 className={classes.title}>{project.title}</h1>
         <Gallery
@@ -35,6 +74,19 @@ export const query = graphql`
         alt
       }
       relationships {
+        field_photo
+      {
+        localFile
+        {
+          childImageSharp{
+            fluid{
+              src
+              presentationWidth
+              presentationHeight
+            }
+          }
+        }
+      }
         field_gallery {
           localFile {
             publicURL

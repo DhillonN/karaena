@@ -7,14 +7,6 @@ import withStyles from "@material-ui/core/styles/withStyles";
 import List from "@material-ui/core/List";
 import ListItem from "@material-ui/core/ListItem";
 
-// @material-ui/icons
-
-// React icons
-import { FaPhone, FaFacebook, FaInstagram,FaLinkedin } from 'react-icons/fa';
-
-// core components
-import Button from "../CustomButtons/Button";
-
 import headerLinksStyle from "./headerLinksStyle.jsx";
 
 function HeaderLinks({ ...props }) {

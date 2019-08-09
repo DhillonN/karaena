@@ -6,3 +6,5 @@
 
 // You can delete this file if you're not using it
 require('typeface-montserrat');
+require("./src/assets/global.css");
+require("./src/components/bootstrap");
