@@ -144,9 +144,11 @@ const title = {
   textDecoration: "none",
   fontWeight: "100",
   fontFamily: `"Roboto Slab", "Times New Roman", serif`,
-  fontSize:"1.5rem",
+  fontSize:"2rem",
+  paddingTop:"2rem",
   "@media (min-width: 1200px)": {
-    fontSize:"2.5rem",
+    fontSize:"2.9rem",
+    padding:"3rem",
   }
 };
 

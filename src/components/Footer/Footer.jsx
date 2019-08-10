@@ -21,8 +21,8 @@ function Footer({ ...props }) {
   return (
     <footer className={footerClasses}>
       <div className={classes.container}>
-        <div className={classes.right}>
-      <List>
+        <div >
+      <List className={classes.right}>
         <ListItem className={classes.listItem}>
         <Tooltip
           id="instagram-twitter"

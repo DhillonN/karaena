@@ -9,7 +9,7 @@ import projectStyles from "./projectstyles"
 import { Link } from "gatsby"
 //import AOS from "aos"
 //import { Watch } from "scrollmonitor-react"
-import "aos/dist/aos.css"
+//import "aos/dist/aos.css"
 class projectsSection extends React.Component {
 /*  componentDidMount() {
     this.aos = AOS
@@ -27,7 +27,7 @@ class projectsSection extends React.Component {
     const { classes } = this.props
     return (
       <section id="works" >
-        <h2 className={classNames(classes.projectTitle)}>Portfolio</h2>
+        <h2 className={classNames(classes.title)}>Portfolio</h2>
         <Grid className={classes.container}>
           {projectsData.edges.map(({ node }, i) => (
             <div key={i}>
@@ -53,7 +53,7 @@ class projectsSection extends React.Component {
                     className={classes.imgRaised}
                   />
                   <div className={classes.description}>
-                    <h3 className={classes.title}>{node.title}</h3>
+                    <h3 className={classes.projectTitle}>{node.title}</h3>
                     <h4 className={classes.subtitle}>{node.field_subtext}</h4>
                   </div>
                 </Card>

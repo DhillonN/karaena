@@ -1,6 +1,5 @@
 import {
   title,
-  karaenaGold,
   lightKaraenaGold,
 } from "../../assets/global"
 import imageStyle from "../../assets/imagesStyles"
@@ -14,21 +13,28 @@ const projectStyle = {
       marginRight:"-8px",
     },
   },
-  projectTitle: {
+  title: {
     ...title,
     display: "block",
     width: "100%",
     textAlign: "center",
-    padding: "3rem",
-    fontSize: "2.5rem",
+
   },
-  title: {
-    ...title,
+  projectTitle: {
     display: "inline-block",
     position: "relative",
     marginTop: "0px",
     minHeight: "32px",
+    color:"#3C4858",
     textDecoration: "none",
+    fontSize:"1.25rem",
+    paddingTop:"10px",
+    fontWeight:"400",
+    fontFamily: `"Roboto Slab", "Times New Roman", serif`,
+    "@media (min-width:1200px)":{
+      fontSize:"2rem",
+
+    },
   },
   transformImage:{
   overflow:"hidden",
