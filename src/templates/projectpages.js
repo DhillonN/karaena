@@ -47,7 +47,7 @@ const projectpages = ({ data, classes }) => {
 };
   return (
     <Layout>
-      <Seo productSEO={seo}/>
+      <Seo pageTitle={project.title} pageDescription={project.field_pagedescription} productSEO={seo}/>
 
       <div className={classNames(classes.main, classes.mainRaised)}>
         <h1 className={classes.title}>{project.title}</h1>
@@ -70,6 +70,7 @@ export const query = graphql`
     nodeProjects(id: { eq: $id }) {
       id
       title
+      field_pagedescription
       field_gallery {
         alt
       }

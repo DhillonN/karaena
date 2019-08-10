@@ -8,7 +8,7 @@ module.exports = {
     pathPrefix:"",
     siteLogo:"https://karaenavincent.co.nz/icons/icon-512x512.png",
     siteFBAppID:"417448411986006",
-    userTwitter:"@karaenavincent_photography"
+    userTwitter:"@karaenavincent_photography",
   },
   plugins: [
     `gatsby-plugin-react-helmet`,

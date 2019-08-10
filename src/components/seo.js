@@ -3,8 +3,9 @@ import Helmet from "react-helmet"
 import urljoin from "url-join"
 import { siteMetaData } from "../sitemeta"
 
-function SEO({ postNode, postPath, postSEO, productSEO }) {
+function SEO({ postNode, postPath, postSEO, productSEO, pageTitle, pageDescription }) {
   const { nodeSeo, allSite, nodeAboutPage } = siteMetaData()
+  const lang="en"
   const karaenaPhoto =
     nodeAboutPage.relationships.field_photo.localFile.childImageSharp.fluid.src
   const presentationHeight =
@@ -30,7 +31,14 @@ function SEO({ postNode, postPath, postSEO, productSEO }) {
     description = config.description
     image = siteLogo
   }
-
+if(pageTitle)
+{
+  title=pageTitle+" - "+title;
+}
+if(pageDescription)
+{
+  description=pageDescription;
+}
 
   const blogURL = urljoin(siteUrl, "")
   let schemaOrgJSONLD = [
@@ -186,9 +194,14 @@ function SEO({ postNode, postPath, postSEO, productSEO }) {
     )
   }
   return (
-    <Helmet>
+    <Helmet
+    htmlAttributes={{
+      lang,
+    }}
+    >
       {/* General tags */}
       <title>{title}</title>
+
       <meta name="description" content={description} />
       <meta name="image" content={image} />
 

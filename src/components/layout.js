@@ -1,4 +1,5 @@
 import React from "react"
+import './bootstrap'
 import CssBaseLine from "@material-ui/core/CssBaseline"
 import PropTypes from "prop-types"
 import Header from "../components/Header/Header"
@@ -22,7 +23,7 @@ const theme = createMuiTheme({
 const layout = ({ children }) => {
   return (
     <>
-      <Seo></Seo>
+      <Seo/>
       <MuiThemeProvider theme={theme}>
         <CssBaseLine />
         <Header
