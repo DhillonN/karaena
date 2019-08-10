@@ -32,7 +32,7 @@ nodeSocialPost (id: {eq: $id}) {
           id
           childImageSharp{
             fluid{
-             ...GatsbyImageSharpFluid_withWebp
+             ...GatsbyImageSharpFluid_withWebp_noBase64
              presentationWidth
              originalImg
              aspectRatio
@@ -45,7 +45,7 @@ nodeSocialPost (id: {eq: $id}) {
           id
           childImageSharp{
             fluid(maxWidth:1920){
-              ...GatsbyImageSharpFluid_withWebp
+              ...GatsbyImageSharpFluid_withWebp_noBase64
               presentationWidth
               originalImg
               aspectRatio
