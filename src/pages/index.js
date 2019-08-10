@@ -43,11 +43,12 @@ export const query = graphql`
         }
       }
     }
-    allNodeProjects(sort: {fields: changed, order: ASC}) {
+    allNodeProjects(sort: {fields: field_sort_order, order: ASC}) {
       edges {
         node {
           id
           title
+          field_show_on_frontpage
           relationships {
             field_photo {
               id

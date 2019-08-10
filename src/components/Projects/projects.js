@@ -31,6 +31,7 @@ class projectsSection extends React.Component {
         <Grid className={classes.container}>
           {projectsData.edges.map(({ node }, i) => (
             <div key={i}>
+              {node.field_show_on_frontpage?
             <Link to={`/${node.title.replace(/\s/g,'-')}`}>
               <GridItems
                 xs={12}
@@ -40,7 +41,6 @@ class projectsSection extends React.Component {
                 className={classes.itemGrid}
               >
                 <Card
-
                   square
                   className={classes.transformImage}
                 >
@@ -58,7 +58,7 @@ class projectsSection extends React.Component {
                   </div>
                 </Card>
               </GridItems>
-            </Link>
+            </Link>:""}
             </div>
           ))}
         </Grid>
