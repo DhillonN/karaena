@@ -10,7 +10,9 @@ class FacebookPosts extends React.Component {
   render() {
     const { classes, postData } = this.props
     var title
+    var titlefull
     var description="";
+    var imageurl;
     if (postData.field_post) {
       title = postData.field_post.value
         .replace(/(<p[^>]+?>|<p>|<\/p>)/gim, "")
@@ -18,11 +20,19 @@ class FacebookPosts extends React.Component {
         .slice(0, 6)
         .concat("...")
         .join(" ");
+        titlefull=postData.field_post.value
+        .replace(/(<p[^>]+?>|<p>|<\/p>)/gim, "")
     } else if (postData.field_post_description) {
       title = postData.field_post_description.processed
         .replace(/(<p[^>]+?>|<p>|<\/p>)/gim, "")
         .split(" ")
         .slice(0, 6)
+        .concat("...")
+        .join(" ")
+        titlefull=postData.field_post_description.processed
+        .replace(/(<p[^>]+?>|<p>|<\/p>)/gim, "")
+        .split(" ")
+        .slice(0, 12)
         .concat("...")
         .join(" ")
     }
@@ -31,10 +41,13 @@ class FacebookPosts extends React.Component {
       description=postData.field_post_description.processed
       .replace(/(<p[^>]+?>|<p>|<\/p>)/gim, "");
     }
-    else description=postData.field_post.value
+    else if(postData.field_post){ description=postData.field_post.value
     .replace(/(<p[^>]+?>|<p>|<\/p>)/gim, "")
-
-    var postSEO={title:title,description:description,url:"",image:"https://karaenavincent.co.nz"+postData.relationships.field_sp_gallery[0].localFile.childImageSharp.fluid.src};
+    }
+    if(postData.relationships.field_sp_gallery){
+      imageurl="https://karaenavincent.co.nz"+postData.relationships.field_sp_gallery[0].localFile.childImageSharp.fluid.src;
+    }
+    var postSEO={title:titlefull,description:description,url:"",image:imageurl};
 
     return (
       <Layout>
