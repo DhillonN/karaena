@@ -3,9 +3,14 @@ import Helmet from "react-helmet"
 import urljoin from "url-join"
 import { siteMetaData } from "../sitemeta"
 
-function SEO({ postNode, postPath, postSEO, productSEO, pageTitle, pageDescription }) {
+function SEO({
+  postSEO,
+  productSEO,
+  pageTitle,
+  pageDescription,
+}) {
   const { nodeSeo, allSite, nodeAboutPage } = siteMetaData()
-  const lang="en"
+  const lang = "en"
   const karaenaPhoto =
     nodeAboutPage.relationships.field_photo.localFile.childImageSharp.fluid.src
   const presentationHeight =
@@ -15,30 +20,27 @@ function SEO({ postNode, postPath, postSEO, productSEO, pageTitle, pageDescripti
     nodeAboutPage.relationships.field_photo.localFile.childImageSharp.fluid
       .presentationWidth
   const config = nodeSeo.field_metadata
-  const { siteUrl, pathPrefix, siteLogo, siteFBAppID, userTwitter } = allSite.nodes[0].siteMetadata
+  const {
+    siteUrl,
+    siteLogo,
+    siteFBAppID,
+    userTwitter,
+  } = allSite.nodes[0].siteMetadata
   let title
   let description
   let image
   let postURL
-  if (postSEO) {
-    const postMeta = postNode.frontmatter
-    ;({ title } = postMeta)
-    description = postMeta.description ? postMeta.description : postNode.excerpt
-    image = postMeta.cover
-    postURL = urljoin(siteUrl, pathPrefix, postPath)
-  } else {
-    title = config.title
-    description = config.description
-    image = siteLogo
+
+  title = config.title
+  description = config.description
+  image = siteLogo
+
+  if (pageTitle) {
+    title = pageTitle + " - " + title
   }
-if(pageTitle)
-{
-  title=pageTitle+" - "+title;
-}
-if(pageDescription)
-{
-  description=pageDescription;
-}
+  if (pageDescription) {
+    description = pageDescription
+  }
 
   const blogURL = urljoin(siteUrl, "")
   let schemaOrgJSONLD = [
@@ -171,9 +173,9 @@ if(pageDescription)
             "@type": "ListItem",
             position: 1,
             item: {
-              "@id": postURL,
-              name: title,
-              image,
+              "@id": postSEO.postURL,
+              name: postSEO.title,
+              image:postSEO.image,
             },
           },
         ],
@@ -181,23 +183,22 @@ if(pageDescription)
       {
         "@context": "http://schema.org",
         "@type": "BlogPosting",
-        url: blogURL,
-        name: title,
-        alternateName: config.siteTitleAlt ? config.siteTitleAlt : "",
-        headline: title,
+        url: postSEO.url,
+        name: postSEO.title,
+        headline: postSEO.title,
         image: {
           "@type": "ImageObject",
-          url: image,
+          url: postSEO.image,
         },
-        description,
+        description:postSEO.description,
       }
     )
   }
   return (
     <Helmet
-    htmlAttributes={{
-      lang,
-    }}
+      htmlAttributes={{
+        lang,
+      }}
     >
       {/* General tags */}
       <title>{title}</title>
@@ -216,17 +217,11 @@ if(pageDescription)
       <meta property="og:title" content={title} />
       <meta property="og:description" content={description} />
       <meta property="og:image" content={image} />
-      <meta
-        property="fb:app_id"
-        content={siteFBAppID ? siteFBAppID : ""}
-      />
+      <meta property="fb:app_id" content={siteFBAppID ? siteFBAppID : ""} />
 
       {/* Twitter Card tags */}
       <meta name="twitter:card" content="summary_large_image" />
-      <meta
-        name="twitter:creator"
-        content={userTwitter ? userTwitter : ""}
-      />
+      <meta name="twitter:creator" content={userTwitter ? userTwitter : ""} />
       <meta name="twitter:title" content={title} />
       <meta name="twitter:description" content={description} />
       <meta name="twitter:image" content={image} />

@@ -1,15 +1,13 @@
 const parallaxStyle = {
   parallax: {
     height: "100vh",
-    maxHeight: "1000px",
     overflow: "hidden",
     position: "relative",
     backgroundPosition: "center center",
     backgroundSize: "cover",
     backgroundRepeat:"no-repeat",
     margin: "0",
-    paddingTop: "52vh",
-    paddingBottom:"10vh",
+    paddingTop: "50vh",
     border: "0",
     display: "flex",
     flexFlow:"column",

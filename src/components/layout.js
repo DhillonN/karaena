@@ -44,7 +44,8 @@ const layout = ({ children }) => {
             TransitionClassName="ScrollUpButton__Toggled"
             style={{ fill: karaenaGold, backgroundColor: "transparent", bottom:"50px" }}
             ToggledStyle={{}}
-          />
+          >
+          </Scrolltop>
         <Footer />
       </MuiThemeProvider>
     </>

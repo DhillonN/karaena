@@ -8,12 +8,42 @@ import {
   FacebookProvider,
   CustomChat,
 } from "dhillon-react-facebook"*/}
+var _detectPassiveEvents = require('detect-passive-events');
 class ContactPage extends React.Component {
+  constructor(props) {
+
+    super(props);
+    this.state={show:false};
+    this.handleScroll=this.handleScroll.bind(this);
+
+  }
+  componentDidMount() {
+   window.addEventListener('scroll', this.handleScroll);
+   window.addEventListener("wheel", this.stopScrolling, _detectPassiveEvents.default.hasSupport ? { passive: true } : false);
+   window.addEventListener("touchstart", this.stopScrolling, _detectPassiveEvents.default.hasSupport ? { passive: true } : false);
+  }
+  componentWillUnmount() {
+   window.removeEventListener('scroll', this.handleScroll);
+   window.removeEventListener("wheel", this.stopScrolling, _detectPassiveEvents.default.hasSupport ? { passive: true } : false);
+   window.removeEventListener("touchstart", this.stopScrolling, _detectPassiveEvents.default.hasSupport ? { passive: true } : false);
+  }
+  handleScroll() {
+    if(window.pageYOffset>150){
+      if(!this.state.show)
+    this.setState({show:true});
+    }
+    else
+    {
+      if(this.state.show)
+    this.setState({show:false});
+    }
+  }
   render() {
     const { classes } = this.props
     return (
       <>
         {/*<FacebookProvider appId="417448411986006" chatSupport={true}>*/}
+        {this.state.show?<>
           <a
             className={classes.links}
             href="mailto:info@karaenavincent.com"
@@ -30,7 +60,7 @@ class ContactPage extends React.Component {
           >
             <Call className={classes.icons} />
             +64 21786055
-          </a>
+          </a></>:""}
 
       {/*    <CustomChat
             minimized="true"

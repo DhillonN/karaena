@@ -121,7 +121,6 @@ const landingPageStyle = {
     display:"flex",
     flexFlow:"row nowrap",
     }
-
   }
 }
 

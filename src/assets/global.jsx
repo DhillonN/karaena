@@ -147,7 +147,7 @@ const title = {
   fontSize:"2rem",
   paddingTop:"2rem",
   "@media (min-width: 1200px)": {
-    fontSize:"2.9rem",
+    fontSize:"5.2rem",
     padding:"3rem",
   }
 };
