@@ -22,7 +22,7 @@ class BlogList extends React.Component {
             {data.allNodeSocialPost.edges.map(({ node }, i) => (
               <div className={classes.column}>
                 {node.relationships.field_sp_image ||
-                node.relationships.field_sp_gallery ? (
+                node.relationships.field_sp_gallery[0] ? (
                   <Card key={node.id} className={classes.containerCard}>
                     <Link
                       key={i.toString()}
@@ -39,19 +39,13 @@ class BlogList extends React.Component {
                             }
                           />
                         ) : (
-                          <>
-                            {node.relationships.field_sp_gallery ? (
-                              <Image
-                                className={classes.imgRaised}
-                                fluid={
-                                  node.relationships.field_sp_gallery[0]
-                                    .localFile.childImageSharp.fluid
-                                }
-                              />
-                            ) : (
-                              ""
-                            )}
-                          </>
+                          <Image
+                            className={classes.imgRaised}
+                            fluid={
+                              node.relationships.field_sp_gallery[0].localFile
+                                .childImageSharp.fluid
+                            }
+                          />
                         )}
                       </div>
                       <div className={classes.description}>

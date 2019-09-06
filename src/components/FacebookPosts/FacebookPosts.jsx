@@ -13,7 +13,8 @@ class FacebookPosts extends React.Component {
     var titlefull
     var description="";
     var imageurl;
-    if (postData.field_post) {
+
+    if (!(!postData.field_post)) {
       title = postData.field_post.value
         .replace(/(<p[^>]+?>|<p>|<\/p>)/gim, "")
         .split(" ")
@@ -44,7 +45,7 @@ class FacebookPosts extends React.Component {
     else if(postData.field_post){ description=postData.field_post.value
     .replace(/(<p[^>]+?>|<p>|<\/p>)/gim, "")
     }
-    if(postData.relationships.field_sp_gallery){
+    if(postData.relationships.field_sp_gallery[0]){
       imageurl="https://karaenavincent.co.nz"+postData.relationships.field_sp_gallery[0].localFile.childImageSharp.fluid.src;
     }
     var postSEO={title:titlefull,description:description,url:"",image:imageurl};

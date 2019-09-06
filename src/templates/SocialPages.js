@@ -11,7 +11,7 @@ export default ({data})=>{
 
 export const query=graphql`
 query($id: String!){
-nodeSocialPost (id: {eq: $id}) {
+  nodeSocialPost(id: {eq: $id}){
     id
     title
     field_posted
