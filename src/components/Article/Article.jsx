@@ -19,26 +19,30 @@ class Article extends Component {
               <div dangerouslySetInnerHTML={{ __html: node.body.processed }}/>
             </div>
             <div className={classes.articleImage}>
+              {node.relationships.field_image?
               <Img
                 fluid={
                   node.relationships.field_image.localFile.childImageSharp.fluid
                 }
-              />
+              />:""}
             </div>
 
           </div>
           ):
           <div className={classes.articleContainer}>
             <div className={classes.articleImage}>
+              {node.relationships.field_image?
               <Img
                 fluid={
                   node.relationships.field_image.localFile.childImageSharp.fluid
                 }
-              />
+              />:""}
             </div>
             <div className={classes.articleText}>
               <h2>{node.title}</h2>
+              {node.body?
               <div dangerouslySetInnerHTML={{ __html: node.body.processed }}/>
+              :""}
             </div>
           </div>
           }

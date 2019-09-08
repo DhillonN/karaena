@@ -1,7 +1,8 @@
 import React from "react"
 import { graphql } from "gatsby"
 import Article from "../components/Article/Article"
-import { Parallax } from "react-parallax"
+import { Parallax,Background } from "react-parallax"
+import Howitworks from "../components/Howitworks/howitworks"
 const insideStyles = {
   background: "white",
   padding: 20,
@@ -13,10 +14,18 @@ const insideStyles = {
 const Branding = ({ data }) => (
   <div>
     <Parallax
-      strength={500}
+      strength={100}
       bgImage={
         data.allNodeParallaxPersonalBranding.edges[0].node.relationships
           .field_photo.localFile.childImageSharp.fluid.src
+      }
+      bgImageSrcSet={
+        data.allNodeParallaxPersonalBranding.edges[0].node.relationships
+          .field_photo.localFile.childImageSharp.fluid.srcset
+      }
+      bgImageSizes={
+        data.allNodeParallaxPersonalBranding.edges[0].node.relationships
+          .field_photo.localFile.childImageSharp.fluid.sizes
       }
     >
       <div style={{ height: "100vh", width: "100vw" }}>
@@ -29,8 +38,8 @@ const Branding = ({ data }) => (
     <Article articlesData={data.allNodeArticle.edges} />
 
     <Parallax
-      blur={{ min: -20, max: 20 }}
-      strength={-300}
+
+      strength={500}
       bgImage={
         data.allNodeParallaxPersonalBranding.edges[1].node.relationships
           .field_photo.localFile.childImageSharp.fluid.src
@@ -44,6 +53,20 @@ const Branding = ({ data }) => (
     </Parallax>
 
     <Article articlesData={data.allNodeArticle.edges} />
+    <Parallax
+      strength={200}
+      bgImage={
+        data.allNodeParallaxPersonalBranding.edges[0].node.relationships
+          .field_photo.localFile.childImageSharp.fluid.src
+      }
+    >
+      <div style={{ height: "100vh", width: "100vw" }}>
+        <h1 style={insideStyles}>
+          {data.allNodeParallaxPersonalBranding.edges[0].node.title}
+        </h1>
+      </div>
+    </Parallax>
+    <Howitworks hiwData={data.allNodeHowItWorks.edges[0].node} />
   </div>
 )
 export default Branding
@@ -91,6 +114,36 @@ export const query = graphql`
           field_subtext
           relationships {
             field_photo {
+              localFile {
+                childImageSharp {
+                  fluid(maxWidth:1920) {
+                    src
+                    srcSet
+                  sizes
+                    ...GatsbyImageSharpFluid_withWebp_noBase64
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+    allNodeHowItWorks {
+      edges {
+        node {
+          title
+          field_step_photo {
+            alt
+            title
+            width
+            height
+          }
+          field_step
+          field_step_details
+          field_button
+          relationships {
+            field_step_photo {
               localFile {
                 childImageSharp {
                   fluid {
