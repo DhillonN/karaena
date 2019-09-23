@@ -4,50 +4,33 @@ import Img from 'gatsby-image'
 import articleStyles from './ArticleStyles'
 class Article extends Component {
   render() {
-    const { articlesData, classes } = this.props
+    const { title,image,text, classes,position } = this.props
 
     return (
       <div style={{position:'relative', backgroundColor:'white'}}>
-        {articlesData.map(({ node },i) => (
-          <>
-
-          {i & 1 ?
+        {position=="left" ?
           (
             <div className={classes.articleContainer}>
              <div className={classes.articleText}>
-              <h2>{node.title}</h2>
-              <div dangerouslySetInnerHTML={{ __html: node.body.processed }}/>
+              <h2>{title}</h2>
+              <div dangerouslySetInnerHTML={{ __html: text }}/>
             </div>
             <div className={classes.articleImage}>
-              {node.relationships.field_image?
-              <Img
-                fluid={
-                  node.relationships.field_image.localFile.childImageSharp.fluid
-                }
-              />:""}
+              <Img fluid={image}/>
             </div>
 
           </div>
           ):
           <div className={classes.articleContainer}>
             <div className={classes.articleImage}>
-              {node.relationships.field_image?
-              <Img
-                fluid={
-                  node.relationships.field_image.localFile.childImageSharp.fluid
-                }
-              />:""}
+              <Img fluid={image}/>
             </div>
             <div className={classes.articleText}>
-              <h2>{node.title}</h2>
-              {node.body?
-              <div dangerouslySetInnerHTML={{ __html: node.body.processed }}/>
-              :""}
+              <h2>{title}</h2>
+              <div dangerouslySetInnerHTML={{ __html: text }}/>
             </div>
           </div>
           }
-          </>
-        ))}
       </div>
     )
   }

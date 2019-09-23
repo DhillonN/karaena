@@ -10,6 +10,7 @@ import { FaPhone as Phone, FaFacebook, FaInstagram,FaLinkedin } from 'react-icon
 import footerStyle from "./footerStyle.jsx";
 import Tooltip from '@material-ui/core/Tooltip/Tooltip'
 import Button from '../CustomButtons/Button'
+import Mailchimp from '../mailchimp/mailchimp'
 
 
 function Footer({ ...props }) {
@@ -75,6 +76,16 @@ function Footer({ ...props }) {
           >
             <FaInstagram/>
           </Button>
+        </Tooltip>
+      </ListItem>
+      <ListItem className={classes.listItem}>
+        <Tooltip
+          id="subscibe-tooltip"
+          title="Subscribe"
+          placement={typeof window !== 'undefined' && window.innerWidth > 959 ? "top" : "left"}
+          classes={{ tooltip: classes.tooltip }}
+        >
+          <Mailchimp/>
         </Tooltip>
       </ListItem>
       </List>

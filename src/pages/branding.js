@@ -1,8 +1,9 @@
 import React from "react"
 import { graphql } from "gatsby"
 import Article from "../components/Article/Article"
-import { Parallax,Background } from "react-parallax"
+import { Parallax} from "react-parallax"
 import Howitworks from "../components/Howitworks/howitworks"
+import Layout from "../components/layout"
 const insideStyles = {
   background: "white",
   padding: 20,
@@ -12,6 +13,7 @@ const insideStyles = {
   transform: "translate(-50%,-50%)",
 }
 const Branding = ({ data }) => (
+  <Layout>
   <div>
     <Parallax
       strength={100}
@@ -68,6 +70,7 @@ const Branding = ({ data }) => (
     </Parallax>
     <Howitworks hiwData={data.allNodeHowItWorks.edges[0].node} />
   </div>
+  </Layout>
 )
 export default Branding
 export const query = graphql`

@@ -45,6 +45,15 @@ module.exports = {
       },
     },
     {
+      resolve:`gatsby-source-sanity`,
+      options:{
+        projectId: 'ze246s4x',
+        dataset: 'kvp',
+        overlayDrafts:true,
+        watchMode:true,
+      },
+    },
+    {
       resolve: "gatsby-plugin-react-svg",
       options: {
         rule: {
@@ -80,6 +89,12 @@ module.exports = {
         siteSpeedSampleRate: 10,
         cookieDomain: "karaenavincent.co.nz",
       },
+    },
+    {
+resolve: `gatsby-plugin-mailchimp`,
+options:{
+  endpoint:'https://karaenavincent.us3.list-manage.com/subscribe/post?u=4ea91bdd3a015f78ba3b0a45c&amp;id=7c84b45842'
+},
     },
 `gatsby-plugin-advanced-sitemap`,
 //`gatsby-plugin-remove-trailing-slashes`,

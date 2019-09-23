@@ -25,11 +25,18 @@ exports.createPages = ({ graphql, actions }) => {
           }
         }
       }
+      allSanityPage {
+        edges {
+          node {
+            id
+            title
+          }
+        }
+      }
     }
   `).then(projects => {
     projects.data.allNodeProjects.edges.forEach(({ node }) => {
       var pathString=(node.title).replace(/\s/g,'-');
-      console.warn(pathString);
       createPage({
         path: pathString,
         component: path.resolve("./src/templates/projectpages.js"),
@@ -44,6 +51,16 @@ exports.createPages = ({ graphql, actions }) => {
         component: path.resolve("./src/templates/SocialPages.js"),
         context: {
           id: node.id,
+        },
+      })
+    })
+    projects.data.allSanityPage.edges.forEach(({node})=>{
+      console.warn(node.title);
+      createPage({
+        path:node.title,
+        component:path.resolve("./src/templates/custompages.js"),
+        context:{
+          id:node.id,
         },
       })
     })
